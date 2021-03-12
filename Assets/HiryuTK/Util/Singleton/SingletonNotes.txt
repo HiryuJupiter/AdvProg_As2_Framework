@@ -1,0 +1,58 @@
+﻿
+
+If you don't want to rely on using an abstract singleton, just do this
+ public class GameDataLoader : MonoBehaviour
+    {
+        [SerializeField] bool loadSaveFile;
+        public static GameDataLoader Instance { get; private set; }
+        public GameData GameData { get; private set; }
+
+
+        void Awake()
+        {
+            //Singleton
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(this);
+            }
+            else if (Instance != null && Instance != this)
+            {
+                DestroyImmediate(gameObject);
+                Debug.Log("---Duplicate " + this.ToString() + " has being destroyed---");
+                return;
+            }
+
+            LoadGameData();
+        }
+ 
+
+ ----
+
+ Backup: this was the original implementation
+
+public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+{
+    public static T Instance { get; private set; }
+
+    protected void DeleteDuplicateSingleton()
+    {
+
+        if (Instance != null && Instance != this)
+        {
+            DestroyImmediate(gameObject);
+            Debug.Log("Duplicate " + typeof(T).ToString() + " has being destroyed.");
+        }
+    }
+
+    /*Usage
+     * protected void Awake()
+    {
+        DeleteDuplicateSingleton();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }*/
+}

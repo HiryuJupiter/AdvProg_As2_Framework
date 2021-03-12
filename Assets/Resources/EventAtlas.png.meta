@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 932ef70e997aa7f45a94a121fa571f9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7118613571338210707
+    second: BG
+  - first:
+      213: -6139420586760718526
+    second: Hero_Angry
+  - first:
+      213: -8075027480263989418
+    second: Hero_Default
+  - first:
+      213: 9158477468831189725
+    second: Hero_Surprised
+  - first:
+      213: 449384484444199750
+    second: Heroine_Angry
+  - first:
+      213: 5162020162835614369
+    second: Heroine_Neutral
+  - first:
+      213: 5212627814305053135
+    second: Heroine_Surprised
+  - first:
+      213: 3906211538354297675
+    second: Parchment
+  - first:
+      213: 7158157567884735915
+    second: Wizard
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BG
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2559
+        width: 2731
+        height: 1536
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d83ecb3556ac260800000000000000
+      internalID: 7118613571338210707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Angry
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 653
+        width: 905
+        height: 1102
+      alignment: 9
+      pivot: {x: -0.46685082, y: 0.6969147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247386f11856ccaa0800000000000000
+      internalID: -6139420586760718526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Default
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 653
+        width: 905
+        height: 1102
+      alignment: 9
+      pivot: {x: -0.46685082, y: 0.6969147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657e85f3a4dbfef80800000000000000
+      internalID: -8075027480263989418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Surprised
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1455
+        width: 905
+        height: 1102
+      alignment: 9
+      pivot: {x: -0.46685082, y: 0.6969147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda0a15fbb2791f70800000000000000
+      internalID: 9158477468831189725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroine_Angry
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 411
+        width: 920
+        height: 1042
+      alignment: 9
+      pivot: {x: 1.4038043, y: 0.73704416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b5ed2cec88c3600800000000000000
+      internalID: 449384484444199750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroine_Neutral
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 713
+        width: 920
+        height: 1042
+      alignment: 9
+      pivot: {x: 1.4038043, y: 0.73704416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa88311dfd23a740800000000000000
+      internalID: 5162020162835614369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroine_Surprised
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 1757
+        width: 921
+        height: 1042
+      alignment: 9
+      pivot: {x: 1.4033659, y: 0.73704416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc939f12169f65840800000000000000
+      internalID: 5212627814305053135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parchment
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 2801
+        width: 1106
+        height: 316
+      alignment: 9
+      pivot: {x: 0.5049729, y: 0.49050632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bd329b2b6a53630800000000000000
+      internalID: 3906211538354297675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 3119
+        width: 1155
+        height: 976
+      alignment: 9
+      pivot: {x: 0.43160173, y: 0.78688526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba53b08e162e65360800000000000000
+      internalID: 7158157567884735915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
