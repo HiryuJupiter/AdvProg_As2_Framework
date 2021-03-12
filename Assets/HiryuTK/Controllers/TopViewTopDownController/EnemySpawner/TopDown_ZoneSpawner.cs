@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace TafeDiplomaFramework.AI
 {
-    public class Spawner : MonoBehaviour
+    public class TopDown_ZoneSpawner : MonoBehaviour
     {
         public enum SpawnMode { XYZ, XY, XZ }
 
-        [SerializeField] private SpawnMode  spawnMode   = SpawnMode.XYZ;
-        [SerializeField] private Vector3    size        = Vector3.one;
-        [SerializeField, Range(0.01f, 10f)]    private float spawnCDMin  = 0f;
-        [SerializeField, Range(0.02f, 5f)] private float spawnCDMax  = 5f;
-        [SerializeField] private GameObject prefab      = null;
+        [SerializeField] private SpawnMode spawnMode = SpawnMode.XYZ;
+        [SerializeField] private Vector3 size = Vector3.one;
+        [SerializeField, Range(0.01f, 10f)] private float spawnCDMin = 0f;
+        [SerializeField, Range(0.02f, 5f)] private float spawnCDMax = 5f;
+        [SerializeField] private GameObject prefab = null;
 
         //Status
         float spawnTimer = 0;
@@ -75,8 +75,8 @@ namespace TafeDiplomaFramework.AI
         private Vector3 GetSpawnPosition()
         {
             float x = Random.Range(-extentX, extentX);
-            float y = spawnMode == SpawnMode.XZ ? 0f :  Random.Range(-extentY, extentY);
-            float z = spawnMode == SpawnMode.XY ? 0f :  Random.Range(-extentZ, extentZ);
+            float y = spawnMode == SpawnMode.XZ ? 0f : Random.Range(-extentY, extentY);
+            float z = spawnMode == SpawnMode.XY ? 0f : Random.Range(-extentZ, extentZ);
             return transform.TransformPoint(new Vector3(x, y, z)); //Make it relative
         }
     }

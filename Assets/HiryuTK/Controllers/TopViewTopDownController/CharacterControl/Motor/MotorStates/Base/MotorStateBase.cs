@@ -6,7 +6,7 @@ namespace HiryuTK.TopDownController
 
     public abstract class MotorStateBase
     {
-        protected TopDownControllerSetting settings;
+        protected Settings_TopDownController settings;
         protected PlayerTopDown3DController player;
         protected PlayerFeedbacks feedback;
         protected PlayerStatus motorStatus;
@@ -18,7 +18,7 @@ namespace HiryuTK.TopDownController
             this.player     = player;
             this.feedback   = feedback;
             motorStatus     = player.Status;
-            settings        = TopDownControllerSetting.Instance;
+            settings        = Settings_TopDownController.Instance;
         }
 
         public virtual void StateEntry()

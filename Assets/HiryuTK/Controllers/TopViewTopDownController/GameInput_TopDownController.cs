@@ -2,9 +2,10 @@
 
 namespace HiryuTK.TopDownController
 {
-    [DefaultExecutionOrder(-1)]
-    public class GameInput : MonoBehaviour
+    [DefaultExecutionOrder(-9000000)]
+    public class GameInput_TopDownController : MonoBehaviour
     {
+        public static GameInput_TopDownController Instance;
         public static float MoveX { get; set; }
         public static float MoveZ { get; set; }
         public static bool JumpBtnDown { get; set; }
@@ -18,13 +19,18 @@ namespace HiryuTK.TopDownController
         public static float MouseX;
         public static float MouseY;
 
-        void Update()
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+        private void Update()
         {
             DirectionInputUpdate();
             ActionInputUpdate();
         }
 
-        void DirectionInputUpdate()
+        private void DirectionInputUpdate()
         {
             //LEFT - RIGHT
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -59,7 +65,7 @@ namespace HiryuTK.TopDownController
             MouseY = Input.GetAxis("Mouse Y");
         }
 
-        void ActionInputUpdate()
+        private void ActionInputUpdate()
         {
             JumpBtnDown = Input.GetKeyDown(KeyCode.Space);
             JumpBtn = Input.GetKey(KeyCode.Space);

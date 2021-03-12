@@ -11,10 +11,13 @@ namespace HiryuTK.TopDownController
     public class PlayerTopDown3DController : MonoBehaviour
     {
         #region Fields
+        [SerializeField] private Transform shootPoint;
+        [SerializeField] private LineRenderer lineRenderer;
+
         //Class and components
-        PlayerFeedbacks feedback;
-        TopDownControllerSetting setting;
-        UIManager uiM;
+        private PlayerFeedbacks feedback;
+        private Settings_TopDownController setting;
+        private UIManager uiM;
 
         //States
         private MotorStates currentStateType;
@@ -23,6 +26,8 @@ namespace HiryuTK.TopDownController
 
         public PlayerStatus Status { get; private set; }
         public Rigidbody Rb { get; private set; }
+        public Transform ShootPoint => shootPoint;
+        public LineRenderer LineRenderer => lineRenderer;
         #endregion
 
         #region MonoBehiavor
@@ -31,7 +36,7 @@ namespace HiryuTK.TopDownController
             //Reference
             Rb = GetComponent<Rigidbody>();
             feedback = GetComponent<PlayerFeedbacks>();
-            setting = TopDownControllerSetting.Instance;
+            setting = Settings_TopDownController.Instance;
 
             //Initialize
             Status = new PlayerStatus(setting.PlayerMaxHealth);
@@ -50,7 +55,6 @@ namespace HiryuTK.TopDownController
         private void Start()
         {
             uiM = UIManager.Instance;
-
         }
 
         private void Update()
@@ -112,6 +116,8 @@ namespace HiryuTK.TopDownController
         #region Private
         private void ExecuteRigidbodyVelocity()
         {
+            Rb.velocity = Status.velocity;
+            //Rb.velocity = transform.TransformDirection(Status.velocity);
             //Rb.velocity = cameraController.NonTiltedRotationTowardsPlayer * Status.currentVelocity;
         }
         #endregion
@@ -125,15 +131,14 @@ namespace HiryuTK.TopDownController
 
         private void OnGUI()
         {
-            GUI.Label(new Rect(20, 20, 500, 20), "Current State: " + currentStateType);
+            GUI.Label(new Rect(20, 20, 500, 20), "Current State   : " + currentStateType);
 
             GUI.Label(new Rect(20, 60, 290, 20), "=== MOVE === ");
             GUI.Label(new Rect(20, 80, 290, 20), "health: " + Status.health);
-            GUI.Label(new Rect(20, 100, 290, 20), "currentVelocity: " + Status.currentVelocity);
-            GUI.Label(new Rect(20, 120, 290, 20), "hurtTimer: " + Status.hurtDuration);
+            GUI.Label(new Rect(20, 100, 290, 20), "currentVelocity: " + Status.velocity);
+            GUI.Label(new Rect(20, 120, 290, 20), "rb velocity    : " + Rb.velocity);
+            GUI.Label(new Rect(20, 160, 290, 20), "hurtTimer      : " + Status.hurtDuration);
             GUI.Label(new Rect(20, 180, 290, 20), "hurtDriftDirection: " + Status.hurtDriftDirection);
-
-
             //GUI.Label(new Rect(200, 0, 290, 20), "=== JUMPING === ");
             //GUI.Label(new Rect(200, 20, 290, 20), );
             //GUI.Label(new Rect(200, 40, 290, 20), );
@@ -141,9 +146,8 @@ namespace HiryuTK.TopDownController
             //GUI.Label(new Rect(200, 80, 290, 20), );
 
             GUI.Label(new Rect(400, 0, 290, 20), "=== INPUT === ");
-            GUI.Label(new Rect(400, 20, 290, 20), "MoveX: " + GameInput.MoveX);
-            GUI.Label(new Rect(400, 40, 290, 20), "MoveZ: " + GameInput.MoveZ);
-
+            GUI.Label(new Rect(400, 20, 290, 20), "MoveX: " + GameInput_TopDownController.MoveX);
+            GUI.Label(new Rect(400, 40, 290, 20), "MoveZ: " + GameInput_TopDownController.MoveZ);
             //GUI.Label(new Rect(300, 120,		290, 20), "testLocation: " + testLocation);
         }
     }

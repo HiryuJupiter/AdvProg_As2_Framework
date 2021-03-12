@@ -3,22 +3,24 @@ using System.Collections;
 
 namespace HiryuTK.TopDownController
 {
-
     public abstract class ModuleBase
     {
-        protected TopDownControllerSetting settings;
+        protected Settings_TopDownController settings;
         protected PlayerTopDown3DController player;
         protected PlayerStatus status;
         protected PlayerFeedbacks feedback;
-
+        protected Transform transform;
+        protected GameInput_TopDownController input;
 
         public ModuleBase(PlayerTopDown3DController player, PlayerFeedbacks feedback)
         {
             this.player = player;
             this.feedback = feedback;
+            transform = player.transform;
             status = player.Status;
 
-            settings = TopDownControllerSetting.Instance;
+            input = GameInput_TopDownController.Instance;
+            settings = Settings_TopDownController.Instance;
         }
 
         public virtual void ModuleEntry() { }

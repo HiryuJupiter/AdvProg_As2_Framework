@@ -8,13 +8,22 @@ namespace HiryuTK.TopDownController
         //Stats
         public int health;
         public int maxHealth;
+        public int money;
 
         //Move
-        public Vector2 currentVelocity;
+        public Vector3 velocity;
+
+        //Hurt
         public float hurtDuration;
 
         //Hurt state
-        [HideInInspector] public Vector2 hurtDriftDirection;
+        [HideInInspector] public Vector3 hurtDriftDirection;
+
+        //Helpers
+        public bool MovingLeft => velocity.x < 0f;
+        public bool MovingRight => velocity.x > 0f;
+        public bool MovingUp => velocity.y > 0f;
+        public bool MovingDown => velocity.y < 0f;
 
         public PlayerStatus(int maxHealth)
         {
@@ -24,16 +33,5 @@ namespace HiryuTK.TopDownController
         public void CachePreviousStatus()
         {
         }
-
-        public void SetAttackAnimationTimer(MonoBehaviour mono, float duration)
-        {
-            mono.StartCoroutine(TickAttackAnimationTimer(duration));
-        }
-
-        private IEnumerator TickAttackAnimationTimer(float duration)
-        {
-            yield return new WaitForSeconds(duration);
-        }
-
     }
 }
