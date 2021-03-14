@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace HiryuTK.ObjectPool
+namespace HiryuTK.TopDownController
 {
-    public class ObjectPoolManager : MonoBehaviour
+    [DefaultExecutionOrder(-1)]
+    public class ObjectPoolManager_TopDown : MonoBehaviour
     {
-        public static ObjectPoolManager instance;
+        public static ObjectPoolManager_TopDown instance;
 
         [Header("Pf")]
         [SerializeField] private PoolObject pf_playerBullet;
@@ -26,7 +27,7 @@ namespace HiryuTK.ObjectPool
         }
 
         public PoolObject SpawnPlayerBullet(Vector3 p, Quaternion r) => playerBullet.Spawn(p, r);
-        public PoolObject SpawnEnemyBullet(Vector3 p, Quaternion r) => enemyShip.Spawn(p, r);
+        public PoolObject SpawnEnemyShip(Vector3 p, Quaternion r) => enemyShip.Spawn(p, r);
         public PoolObject SpawnAsteroid(Vector3 p, Quaternion r) => asteroids.Spawn(p, r);
     }
 }

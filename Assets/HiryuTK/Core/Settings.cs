@@ -54,8 +54,8 @@ namespace HiryuTK.Core
             }
         }
 
-        public static bool IsTargetOnPlayerLayer(GameObject go) => Instance.PlayerLayer == (Instance.PlayerLayer | 1 << go.layer);
-        public static bool IsTargetOnEnemyLayer(GameObject go) => Instance.EnemyLayer == (Instance.EnemyLayer | 1 << go.layer);
-        public static bool IsTargetOnGroundLayer(GameObject go) => Instance.GroundLayer == (Instance.GroundLayer | 1 << go.layer);
+        public bool IsTargetOnPlayerLayer(GameObject go) => PlayerLayer == (PlayerLayer | 1 << go.layer);
+        public bool IsTargetOnEnemyLayer(GameObject go) =>  EnemyLayer == (EnemyLayer | 1 << go.layer);
+        public bool IsTargetOnGroundLayer(GameObject go) => GroundLayer == (GroundLayer | 1 << go.layer);
     }
 }

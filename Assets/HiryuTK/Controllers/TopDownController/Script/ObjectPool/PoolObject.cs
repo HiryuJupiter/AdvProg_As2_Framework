@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace HiryuTK.ObjectPool
+namespace HiryuTK.TopDownController
 {
     /// <summary>
     /// We use this instead an interface (e.g. IPoolable) because the inspector
@@ -14,18 +14,19 @@ namespace HiryuTK.ObjectPool
     public abstract class PoolObject : MonoBehaviour
     {
         protected Pool pool;
+
         public virtual void InitialSpawn(Pool pool)
         {
             this.pool = pool;
         }
         public virtual void Activation() { }
-        public virtual void Activation(Vector3 p)
+        public virtual void Activation(Vector2 p) 
         {
             transform.position = p;
             Activation();
         }
 
-        public virtual void Activation(Vector3 p, Quaternion r)
+        public virtual void Activation(Vector2 p, Quaternion r) 
         {
             transform.position = p;
             transform.rotation = r;
