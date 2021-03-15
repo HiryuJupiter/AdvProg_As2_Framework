@@ -26,7 +26,7 @@ namespace HiryuTK.TopDownController
 
         private void Spawn(int count)
         {
-            StartCoroutine(DoSpawn(count));
+            StartCoroutine(DoSpawn(1));
         }
 
         private IEnumerator DoSpawn(int count)
@@ -47,7 +47,7 @@ namespace HiryuTK.TopDownController
                     //else
                     //    SpawnEnemyShip();
                     SpawnEnemyShip();
-                    count++;
+                    count--;
                     RefreshTimer();
                 }
                 yield return null;

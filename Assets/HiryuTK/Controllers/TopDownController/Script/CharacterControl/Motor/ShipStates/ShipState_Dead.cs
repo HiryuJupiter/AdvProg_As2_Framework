@@ -5,9 +5,9 @@ using System.Collections;
 
 namespace HiryuTK.TopDownController
 {
-    public class MotorState_Dead : MotorStateBase
+    public class ShipState_Dead : ShipStateBase
     {
-        public MotorState_Dead(PlayerTopDown3DController player, PlayerFeedbacks feedbacks) : base(player, feedbacks)
+        public ShipState_Dead(PlayerTopDown3DController player, PlayerFeedbacks feedbacks) : base(player, feedbacks)
         {
             modules = new List<ModuleBase>()
             {

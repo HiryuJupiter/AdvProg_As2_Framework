@@ -21,9 +21,9 @@ namespace HiryuTK.TopDownController
         private UIManager_TopDown uiM;
 
         //States
-        private MotorStates currentStateType;
-        private MotorStateBase currentStateClass;
-        private Dictionary<MotorStates, MotorStateBase> stateClassLookup;
+        private ShipStates currentStateType;
+        private ShipStateBase currentStateClass;
+        private Dictionary<ShipStates, ShipStateBase> stateClassLookup;
 
         //Status 
         private int Money;
@@ -50,15 +50,15 @@ namespace HiryuTK.TopDownController
             Status = new PlayerStatus(setting.PlayerMaxHealth);
 
             //FSM
-            stateClassLookup = new Dictionary<MotorStates, MotorStateBase>
+            stateClassLookup = new Dictionary<ShipStates, ShipStateBase>
             {
-                {MotorStates.Stationed,     new MotorState_Stationed(this, feedback)},
-                {MotorStates.Normal,        new MotorState_Normal(this, feedback)},
-                {MotorStates.Hurt,          new MotorState_Hurt(this, feedback)},
-                {MotorStates.Dead,          new MotorState_Dead(this, feedback)},
+                {ShipStates.Stationed,     new ShipState_Stationed(this, feedback)},
+                {ShipStates.Normal,        new ShipState_Normal(this, feedback)},
+                {ShipStates.Hurt,          new ShipState_Hurt(this, feedback)},
+                {ShipStates.Dead,          new ShipState_Dead(this, feedback)},
             };
 
-            currentStateType = MotorStates.Normal;
+            currentStateType = ShipStates.Normal;
             currentStateClass = stateClassLookup[currentStateType];
             currentStateClass.StateEntry();
         }
@@ -81,10 +81,11 @@ namespace HiryuTK.TopDownController
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (Settings_TopDownController.Instance.IsTargetOnEnemyLayer(collision.gameObject) ||
+            //Settings_TopDownController.Instance.IsTargetOnEnemyLayer(collision.gameObject) ||
+            if (
                 Settings_TopDownController.Instance.IsTargetOnGroundLayer(collision.gameObject))
             {
-                Debug.Log("player hits object");
+                Debug.Log("player hits damaging object");
                 collision.gameObject.GetComponent<IDamagable>().TakeDamage(1);
                 DamagePlayer(collision.gameObject.transform.position, 999);
             }
@@ -92,6 +93,28 @@ namespace HiryuTK.TopDownController
             {
                 Debug.Log("player hits "  + collision.gameObject.name + " of layer " + collision.gameObject.layer);
             }
+        }
+
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(20, 20, 500, 20), "Current State   : " + currentStateType);
+
+            GUI.Label(new Rect(20, 60, 290, 20), "=== MOVE === ");
+            GUI.Label(new Rect(20, 80, 290, 20), "health: " + Status.health);
+            GUI.Label(new Rect(20, 100, 290, 20), "currentVelocity: " + Status.velocity);
+            GUI.Label(new Rect(20, 120, 290, 20), "rb velocity    : " + Rb.velocity);
+            GUI.Label(new Rect(20, 160, 290, 20), "hurtTimer      : " + Status.hurtDuration);
+            GUI.Label(new Rect(20, 180, 290, 20), "hurtDriftDirection: " + Status.hurtDriftDirection);
+            //GUI.Label(new Rect(200, 0, 290, 20), "=== JUMPING === ");
+            //GUI.Label(new Rect(200, 20, 290, 20), );
+            //GUI.Label(new Rect(200, 40, 290, 20), );
+            //GUI.Label(new Rect(200, 60, 290, 20), );
+            //GUI.Label(new Rect(200, 80, 290, 20), );
+
+            GUI.Label(new Rect(400, 0, 290, 20), "=== INPUT === ");
+            GUI.Label(new Rect(400, 20, 290, 20), "MoveX: " + GameInput_TopDownController.MoveX);
+            GUI.Label(new Rect(400, 40, 290, 20), "MoveZ: " + GameInput_TopDownController.MoveY);
+            //GUI.Label(new Rect(300, 120,		290, 20), "testLocation: " + testLocation);
         }
         #endregion
 
@@ -104,18 +127,18 @@ namespace HiryuTK.TopDownController
 
         public void DamagePlayer(Vector2 enemyPos, int damage)
         {
-            if (currentStateType != MotorStates.Hurt)
+            if (currentStateType != ShipStates.Hurt)
             {
                 Status.health -= damage;
                 if (Status.health <= 0)
                 {
                     Status.health = 0;
                     uiM.SetDeathScreenVisibility(true);
-                    SwitchToNewState(MotorStates.Dead);
+                    SwitchToNewState(ShipStates.Dead);
                 }
                 else
                 {
-                    SwitchToNewState(MotorStates.Hurt);
+                    SwitchToNewState(ShipStates.Hurt);
                 }
                 uiM.SetHealth(Status.health / Status.maxHealth);
             }
@@ -126,7 +149,7 @@ namespace HiryuTK.TopDownController
             Rb.rotation = Rb.rotation + amount;
         }
 
-        public void SwitchToNewState(MotorStates newStateType)
+        public void SwitchToNewState(ShipStates newStateType)
         {
             if (currentStateType != newStateType)
             {
@@ -165,27 +188,7 @@ namespace HiryuTK.TopDownController
         }
         #endregion
 
-        private void OnGUI()
-        {
-            GUI.Label(new Rect(20, 20, 500, 20), "Current State   : " + currentStateType);
 
-            GUI.Label(new Rect(20, 60, 290, 20), "=== MOVE === ");
-            GUI.Label(new Rect(20, 80, 290, 20), "health: " + Status.health);
-            GUI.Label(new Rect(20, 100, 290, 20), "currentVelocity: " + Status.velocity);
-            GUI.Label(new Rect(20, 120, 290, 20), "rb velocity    : " + Rb.velocity);
-            GUI.Label(new Rect(20, 160, 290, 20), "hurtTimer      : " + Status.hurtDuration);
-            GUI.Label(new Rect(20, 180, 290, 20), "hurtDriftDirection: " + Status.hurtDriftDirection);
-            //GUI.Label(new Rect(200, 0, 290, 20), "=== JUMPING === ");
-            //GUI.Label(new Rect(200, 20, 290, 20), );
-            //GUI.Label(new Rect(200, 40, 290, 20), );
-            //GUI.Label(new Rect(200, 60, 290, 20), );
-            //GUI.Label(new Rect(200, 80, 290, 20), );
-
-            GUI.Label(new Rect(400, 0, 290, 20), "=== INPUT === ");
-            GUI.Label(new Rect(400, 20, 290, 20), "MoveX: " + GameInput_TopDownController.MoveX);
-            GUI.Label(new Rect(400, 40, 290, 20), "MoveZ: " + GameInput_TopDownController.MoveY);
-            //GUI.Label(new Rect(300, 120,		290, 20), "testLocation: " + testLocation);
-        }
     }
 }
 

@@ -31,7 +31,8 @@ namespace HiryuTK.TopDownController
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (Settings_TopDownController.Instance.IsTargetOnEnemyLayer(collision.gameObject))
+            if (Settings_TopDownController.Instance.IsTargetOnEnemyLayer(collision.gameObject) ||
+                Settings_TopDownController.Instance.IsTargetOnGroundLayer(collision.gameObject))
             {
                 collision.gameObject.GetComponent<IDamagable>().TakeDamage(1);
                 Despawn();

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace HiryuTK.TopDownController
 {
 
-    public abstract class MotorStateBase
+    public abstract class ShipStateBase
     {
         protected Settings_TopDownController settings;
         protected PlayerTopDown3DController player;
@@ -13,7 +13,7 @@ namespace HiryuTK.TopDownController
 
         protected List<ModuleBase> modules = new List<ModuleBase>();
 
-        public MotorStateBase(PlayerTopDown3DController player, PlayerFeedbacks feedback)
+        public ShipStateBase(PlayerTopDown3DController player, PlayerFeedbacks feedback)
         {
             this.player     = player;
             this.feedback   = feedback;

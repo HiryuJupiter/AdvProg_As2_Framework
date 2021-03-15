@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace HiryuTK.TopDownController
 {
-    public class MotorState_Stationed : MotorStateBase
+    public class ShipState_Stationed : ShipStateBase
     {
-        public MotorState_Stationed(PlayerTopDown3DController player, PlayerFeedbacks feedback) : base(player, feedback)
+        public ShipState_Stationed(PlayerTopDown3DController player, PlayerFeedbacks feedback) : base(player, feedback)
         {
             modules = new List<ModuleBase>()
             {

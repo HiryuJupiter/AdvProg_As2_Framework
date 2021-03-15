@@ -44,7 +44,9 @@ namespace HiryuTK.TopDownController
         
         [Header("Enemy Movement")]
         [SerializeField] private float enemyMove = 2f;
+        [SerializeField] private float enemyRotation = 100f;
         public float EnemyMove => enemyMove;
+        public float EnemyRotation => enemyRotation;
 
 
         [Header("Hurt State")]

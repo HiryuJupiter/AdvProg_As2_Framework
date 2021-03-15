@@ -18,6 +18,8 @@ namespace HiryuTK.TopDownController
         private bool alive;
 
         #region Mono
+
+
         private void FixedUpdate()
         {
             //transform.rotation = Quaternion.LookRotation(moveDir, -Vector3.forward);  //Lerp this later
@@ -25,9 +27,10 @@ namespace HiryuTK.TopDownController
             //Rotate towards player
             Vector3 dirToPlayer = player.transform.position - transform.position;
             Quaternion targetRot = Quaternion.LookRotation(Vector3.forward, dirToPlayer);
-            transform.rotation = targetRot;
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, settings.EnemyRotation * Time.deltaTime);
 
-            transform.Translate(transform.up * Settings_TopDownController.Instance.MoveSpeed * Time.deltaTime);
+            transform.Translate(transform.up * settings.EnemyMove * Time.deltaTime, Space.World);
+            Debug.DrawRay(transform.position, transform.up, Color.magenta, 10f);
 
         }
 
@@ -52,6 +55,7 @@ namespace HiryuTK.TopDownController
         {
             base.InitialSpawn(pool);
             collider = GetComponent<Collider2D>();
+            settings = Settings_TopDownController.Instance;
             player = PlayerTopDown3DController.Instance;
         }
 
@@ -61,12 +65,14 @@ namespace HiryuTK.TopDownController
             transform.position = p;
             transform.rotation = r;
             moveDir = transform.up;
+            Debug.DrawRay(transform.position, moveDir, Color.yellow, 10f);
             StartCoroutine(DetectOutOfBounds());
         }
 
         //Non-public
         protected override void Despawn()
         {
+            Debug.Log("Ship destroyed");
             checkingForCollision = false;
             base.Despawn();
         }
@@ -154,7 +160,7 @@ namespace HiryuTK.TopDownController
         private IEnumerator DetectOutOfBounds()
         {
             alive = true;
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(3f);
             while (alive)
             {
                 if (settings.IsOutOfBounds(transform.position))

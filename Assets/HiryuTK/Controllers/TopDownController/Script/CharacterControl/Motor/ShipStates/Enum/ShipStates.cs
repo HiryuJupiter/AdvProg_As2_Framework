@@ -1,4 +1,4 @@
-﻿public enum MotorStates
+﻿public enum ShipStates
 {
     Stationed, Normal, Hurt, Dead
 }
