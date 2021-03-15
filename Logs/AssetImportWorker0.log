@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Enterprise; OS build 18363.1440; Version 1909; 64bit' Language: 'en' Physical Memory: 16304 MB
+OS: 'Windows 10 Pro; OS build 19041.867; Version 2004; 64bit' Language: 'en' Physical Memory: 32635 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,910 +11,339 @@ C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/jackson.king/Documents/jking/AdvProg_As2_Framework
+D:/CORE/TAFE Diploma/2_AdvProgrammming/As2_Framework/AdvProg_As2_Framework
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59995
-Successfully changed project path to: C:/Users/jackson.king/Documents/jking/AdvProg_As2_Framework
-C:/Users/jackson.king/Documents/jking/AdvProg_As2_Framework
+55110
+Successfully changed project path to: D:/CORE/TAFE Diploma/2_AdvProgrammming/As2_Framework/AdvProg_As2_Framework
+D:/CORE/TAFE Diploma/2_AdvProgrammming/As2_Framework/AdvProg_As2_Framework
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 23.45 ms, found 0 plugins.
+Unable to join player connection multicast group.
+
+Unable to join player connection alternative multicast group.
+
+Refreshing native plugins compatible for Editor in 22.62 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/jackson.king/Documents/jking/AdvProg_As2_Framework/Assets
+[Subsystems] Discovering subsystems at path D:/CORE/TAFE Diploma/2_AdvProgrammming/As2_Framework/AdvProg_As2_Framework/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA Quadro K2200  (ID=0x13ba)
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 980M (ID=0x13d7)
     Vendor:   
-    VRAM:     4035 MB
-    Driver:   10.18.13.5362
+    VRAM:     8144 MB
+    Driver:   27.21.14.6172
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001384 seconds.
+Registered in 0.002341 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 26.42 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 21.81 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.558 seconds
+- Completed reload, in  1.725 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000804 seconds.
+Registered in 0.000548 seconds.
 Begin MonoManager ReloadAssembly
 OnLevelWasLoaded was found on MusicPlayer
 This message has been deprecated and will be removed in a later version of Unity.
 Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
 
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.753 seconds
+- Completed reload, in  0.784 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1216 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.1 MB.
-System memory in use after: 59.2 MB.
+Unloading 1217 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.8 MB.
+System memory in use after: 59.9 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1658.
-Total: 1.772500 ms (FindLiveObjects: 0.138900 ms CreateObjectMapping: 0.034200 ms MarkObjects: 1.489800 ms  DeleteObjects: 0.109000 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1663.
+Total: 1.894800 ms (FindLiveObjects: 0.117100 ms CreateObjectMapping: 0.034500 ms MarkObjects: 1.633000 ms  DeleteObjects: 0.109500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/HiryuPkgs
-  artifactKey: Guid(7685433b73cc1644cb03debeaf8a46c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuPkgs using Guid(7685433b73cc1644cb03debeaf8a46c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39766148302d5eb9c99afaff71ce6154') in 0.007387 seconds
-  Import took 0.009233 seconds .
+  path: Assets/HiryuTK/Shader
+  artifactKey: Guid(85731c474a9a74b49b65c697bcbddf8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader using Guid(85731c474a9a74b49b65c697bcbddf8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31b87c703f1c448a3460ed304e2c3b7') in 0.008182 seconds
+  Import took 0.010034 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1319.844865 seconds.
-  path: Assets/HiryuTK
-  artifactKey: Guid(faf87a414ba01c3409109d69481041ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK using Guid(faf87a414ba01c3409109d69481041ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c15e099c270b07d10bff81507200556') in 0.010881 seconds
-  Import took 0.014299 seconds .
+  Time since last request: 6.437939 seconds.
+  path: Assets/HiryuTK/Shader/Shader1.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765d2c5355a21efd52eff6c2ebbe76b3') in 0.056640 seconds
+  Import took 0.058648 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.497666 seconds.
-  path: Assets/HiryuTK/extensionMethodEx.cs
-  artifactKey: Guid(027b57b71b2c4064ab89f0cfc6bbc881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/extensionMethodEx.cs using Guid(027b57b71b2c4064ab89f0cfc6bbc881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939d9fe6e0fbc7b50806a1d8a70d11fb') in 0.034703 seconds
-  Import took 0.036765 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000844 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.811 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.1 MB.
-System memory in use after: 59.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1661.
-Total: 2.516400 ms (FindLiveObjects: 0.223000 ms CreateObjectMapping: 0.065700 ms MarkObjects: 2.202600 ms  DeleteObjects: 0.023600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000601 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.709 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.2 MB.
-System memory in use after: 59.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1663.
-Total: 1.705700 ms (FindLiveObjects: 0.163500 ms CreateObjectMapping: 0.038600 ms MarkObjects: 1.476400 ms  DeleteObjects: 0.026600 ms)
+  Time since last request: 0.000450 seconds.
+  path: Assets/HiryuTK/Shader/Shader1.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765d2c5355a21efd52eff6c2ebbe76b3') in 0.003064 seconds
+  Import took 0.005099 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 678.632543 seconds.
-  path: Assets/HiryuTK/extensionMethodEx.cs
-  artifactKey: Guid(027b57b71b2c4064ab89f0cfc6bbc881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/extensionMethodEx.cs using Guid(027b57b71b2c4064ab89f0cfc6bbc881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75e60269d7ec1942c4034ae95dd5ed0f') in 0.004325 seconds
-  Import took 0.006306 seconds .
+  Time since last request: 1008.290844 seconds.
+  path: Assets/HiryuTK/Shader/Shader1.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8b518f0a18d7342c50791896f281463') in 0.004019 seconds
+  Import took 0.006893 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.123719 seconds.
-  path: Assets/HiryuTK/Audio
-  artifactKey: Guid(3a300f6dc08dfbd4098b094d10582961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Audio using Guid(3a300f6dc08dfbd4098b094d10582961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919d81b7dcd7cfdfec06b1be8135917e') in 0.010053 seconds
-  Import took 0.012069 seconds .
+  Time since last request: 2518.595932 seconds.
+  path: Assets/HiryuTK/Shader/Shader1.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c5882245e7482984e9709dd723c55f') in 0.003588 seconds
+  Import took 0.006974 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.424479 seconds.
-  path: Assets/HiryuTK/Controllers
-  artifactKey: Guid(03a155abdf8d2af4a9024a35739036d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers using Guid(03a155abdf8d2af4a9024a35739036d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa62be0c1b28b9a1dd3213b2f3448d07') in 0.007193 seconds
-  Import took 0.009250 seconds .
+  Time since last request: 0.028518 seconds.
+  path: Assets/HiryuTK/Shader/Shader1.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c5882245e7482984e9709dd723c55f') in 0.003930 seconds
+  Import took 0.006385 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.982673 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController
-  artifactKey: Guid(f3fecc6b4c3af3c4698275bd5d9fc521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController using Guid(f3fecc6b4c3af3c4698275bd5d9fc521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db438ea32821298c9f36ae9689cebea') in 0.006679 seconds
-  Import took 0.009005 seconds .
+  Time since last request: 10.351582 seconds.
+  path: Assets/HiryuTK/Shader/ShaderTest.unity
+  artifactKey: Guid(5d1cdf33d5e03634fb505507b6c9f3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/ShaderTest.unity using Guid(5d1cdf33d5e03634fb505507b6c9f3d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c61e1efe4dddad1e31332861e37cacf') in 0.008467 seconds
+  Import took 0.011624 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.103531 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/TopDown3DController.unity
-  artifactKey: Guid(0ce2a193c5cdac040b3d86fc4b418ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/TopDown3DController.unity using Guid(0ce2a193c5cdac040b3d86fc4b418ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc89de8071dc3ae2b1a6267057f63799') in 0.011985 seconds
-  Import took 0.014209 seconds .
+  Time since last request: 1669.552787 seconds.
+  path: Assets/HiryuTK/Shader/Shader1.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae625b457e00b50da6222c50aae8aa9') in 0.003963 seconds
+  Import took 0.006706 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/TopDown3DController.unity
-  artifactKey: Guid(0ce2a193c5cdac040b3d86fc4b418ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/TopDown3DController.unity using Guid(0ce2a193c5cdac040b3d86fc4b418ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc89de8071dc3ae2b1a6267057f63799') in 0.002942 seconds
-  Import took 0.004816 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000647 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.688 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.3 MB.
-System memory in use after: 59.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1665.
-Total: 1.611300 ms (FindLiveObjects: 0.140700 ms CreateObjectMapping: 0.038400 ms MarkObjects: 1.415800 ms  DeleteObjects: 0.015600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000571 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.723 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.4 MB.
-System memory in use after: 59.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1667.
-Total: 1.622500 ms (FindLiveObjects: 0.185600 ms CreateObjectMapping: 0.040600 ms MarkObjects: 1.382400 ms  DeleteObjects: 0.013100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000624 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.775 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.5 MB.
-System memory in use after: 59.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1669.
-Total: 1.643500 ms (FindLiveObjects: 0.144800 ms CreateObjectMapping: 0.035700 ms MarkObjects: 1.433400 ms  DeleteObjects: 0.013800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000675 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.690 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.5 MB.
-System memory in use after: 59.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1671.
-Total: 1.791800 ms (FindLiveObjects: 0.151100 ms CreateObjectMapping: 0.039800 ms MarkObjects: 1.559500 ms  DeleteObjects: 0.040200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000583 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.707 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.6 MB.
-System memory in use after: 59.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1673.
-Total: 1.639100 ms (FindLiveObjects: 0.185400 ms CreateObjectMapping: 0.046000 ms MarkObjects: 1.390400 ms  DeleteObjects: 0.016200 ms)
+  Time since last request: 7.224890 seconds.
+  path: Assets/HiryuTK/Shader/Shader1_Red.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1_Red.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e5f5c19243ec2508834b81b24707a88') in 0.008861 seconds
+  Import took 0.011570 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8284.855790 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/Pf
-  artifactKey: Guid(841752bbccccf644e88406f0868966e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/Pf using Guid(841752bbccccf644e88406f0868966e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc68ac7aa2e3ec6f4771ad24ca89d15b') in 0.008557 seconds
-  Import took 0.010580 seconds .
+  Time since last request: 8.316110 seconds.
+  path: Assets/HiryuTK/Shader/Shader1_Red 1.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1_Red 1.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6f6a94bc94e7652354dbaec9191d90') in 0.007827 seconds
+  Import took 0.010204 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005144 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/Pf
-  artifactKey: Guid(841752bbccccf644e88406f0868966e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/Pf using Guid(841752bbccccf644e88406f0868966e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc68ac7aa2e3ec6f4771ad24ca89d15b') in 0.003010 seconds
-  Import took 0.005525 seconds .
+  Time since last request: 3.610337 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1189c83e7504e961fd22f18ed4f7ed') in 0.017729 seconds
+  Import took 0.021190 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.263741 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/Pf/Pf_Asteroid.prefab
-  artifactKey: Guid(c4b8d9be616332b4ba009c6aa890756f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/Pf/Pf_Asteroid.prefab using Guid(c4b8d9be616332b4ba009c6aa890756f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d5c33b8012b29d3838aa3649a242d8') in 0.123047 seconds
-  Import took 0.125126 seconds .
+  Time since last request: 0.000865 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1189c83e7504e961fd22f18ed4f7ed') in 0.003208 seconds
+  Import took 0.005495 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.085479 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/Pf/Pf_Asteroid.prefab
-  artifactKey: Guid(c4b8d9be616332b4ba009c6aa890756f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/Pf/Pf_Asteroid.prefab using Guid(c4b8d9be616332b4ba009c6aa890756f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d5c33b8012b29d3838aa3649a242d8') in 0.009723 seconds
-  Import took 0.012120 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000678 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.676 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.9 MB.
-System memory in use after: 63.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1684.
-Total: 1.684900 ms (FindLiveObjects: 0.139300 ms CreateObjectMapping: 0.036200 ms MarkObjects: 1.494300 ms  DeleteObjects: 0.014400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000552 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.731 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 62.9 MB.
-System memory in use after: 63.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1686.
-Total: 1.755200 ms (FindLiveObjects: 0.140300 ms CreateObjectMapping: 0.036500 ms MarkObjects: 1.564700 ms  DeleteObjects: 0.012900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000823 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.729 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.0 MB.
-System memory in use after: 63.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1688.
-Total: 1.601000 ms (FindLiveObjects: 0.156100 ms CreateObjectMapping: 0.049800 ms MarkObjects: 1.379400 ms  DeleteObjects: 0.014700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000548 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.689 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.1 MB.
-System memory in use after: 63.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1690.
-Total: 1.727900 ms (FindLiveObjects: 0.155100 ms CreateObjectMapping: 0.051400 ms MarkObjects: 1.506000 ms  DeleteObjects: 0.014400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000534 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.701 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.2 MB.
-System memory in use after: 63.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1692.
-Total: 1.640900 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.040600 ms MarkObjects: 1.420800 ms  DeleteObjects: 0.014600 ms)
+  Time since last request: 13.485485 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4bc5fa16a30a46b3ad526595478975f') in 0.003228 seconds
+  Import took 0.005382 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 248.331059 seconds.
-  path: Assets/HiryuTK/Controllers/TopDownController/Pf/EnemyShip.prefab
-  artifactKey: Guid(72951ef920f889547a35ece90599c922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HiryuTK/Controllers/TopDownController/Pf/EnemyShip.prefab using Guid(72951ef920f889547a35ece90599c922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c167fc0085d79ec5e4a25326a2a9279') in 0.071266 seconds
-  Import took 0.073495 seconds .
+  Time since last request: 2.445740 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da80d4e23386eddd8b59c83b6568020') in 0.002959 seconds
+  Import took 0.004983 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000863 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.702 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.3 MB.
-System memory in use after: 63.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1695.
-Total: 1.703900 ms (FindLiveObjects: 0.174700 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.439400 ms  DeleteObjects: 0.038100 ms)
+Received Import Request.
+  Time since last request: 75.509763 seconds.
+  path: Assets/HiryuTK/Shader/Shader1_Red.shader
+  artifactKey: Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader1_Red.shader using Guid(e1def5b41074e544bb1514bb17fe3c4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0154c35067b2849fcd6651ecc4dac29f') in 0.003188 seconds
+  Import took 0.005652 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000529 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.702 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.4 MB.
-System memory in use after: 63.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1697.
-Total: 1.434900 ms (FindLiveObjects: 0.157000 ms CreateObjectMapping: 0.032600 ms MarkObjects: 1.233200 ms  DeleteObjects: 0.011300 ms)
+Received Import Request.
+  Time since last request: 0.919681 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '929f0de49b5bd9479d2851a81191f217') in 0.003144 seconds
+  Import took 0.005230 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000689 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.735 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.5 MB.
-System memory in use after: 63.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1699.
-Total: 1.859700 ms (FindLiveObjects: 0.186300 ms CreateObjectMapping: 0.039800 ms MarkObjects: 1.601600 ms  DeleteObjects: 0.031100 ms)
+Received Import Request.
+  Time since last request: 207.321408 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c8c2703e2e9d229640eebc0f63ab87') in 0.003901 seconds
+  Import took 0.006004 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000701 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.670 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.5 MB.
-System memory in use after: 63.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1701.
-Total: 1.755900 ms (FindLiveObjects: 0.141200 ms CreateObjectMapping: 0.032400 ms MarkObjects: 1.551800 ms  DeleteObjects: 0.029600 ms)
+Received Import Request.
+  Time since last request: 1601.309420 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1735a2c561038565baf0e76087d4a69') in 0.003469 seconds
+  Import took 0.005909 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000732 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.713 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.6 MB.
-System memory in use after: 63.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1703.
-Total: 1.718100 ms (FindLiveObjects: 0.213100 ms CreateObjectMapping: 0.057700 ms MarkObjects: 1.430700 ms  DeleteObjects: 0.015300 ms)
+Received Import Request.
+  Time since last request: 1329.679583 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Colored.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Colored.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0703fa7df5731ca28ce9ac4928deb12') in 0.004080 seconds
+  Import took 0.007065 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000561 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.677 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.7 MB.
-System memory in use after: 63.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1705.
-Total: 2.038300 ms (FindLiveObjects: 0.188300 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.756300 ms  DeleteObjects: 0.040800 ms)
+Received Import Request.
+  Time since last request: 1.450745 seconds.
+  path: Assets/HiryuTK/Shader/Unlit_Shader2_Magma.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Unlit_Shader2_Magma.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1157b37289d32bfcca64d66ee045091') in 0.007512 seconds
+  Import took 0.009946 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000575 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.731 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.8 MB.
-System memory in use after: 63.9 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1707.
-Total: 1.886000 ms (FindLiveObjects: 0.141000 ms CreateObjectMapping: 0.030500 ms MarkObjects: 1.683900 ms  DeleteObjects: 0.029500 ms)
+Received Import Request.
+  Time since last request: 8.261653 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Magma.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Magma.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc477645ddf82b090f1eebbb34ed798') in 0.009351 seconds
+  Import took 0.011941 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000724 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.684 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.9 MB.
-System memory in use after: 64.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1709.
-Total: 1.534300 ms (FindLiveObjects: 0.127000 ms CreateObjectMapping: 0.029400 ms MarkObjects: 1.365100 ms  DeleteObjects: 0.011700 ms)
+Received Import Request.
+  Time since last request: 7.834362 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Magma.shader
+  artifactKey: Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Magma.shader using Guid(ce8dff8bf41714a4f966a7e1c92f6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da3c3cedb01d3488e368780a78a70980') in 0.003370 seconds
+  Import took 0.005522 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000571 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.723 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.0 MB.
-System memory in use after: 64.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1711.
-Total: 1.907200 ms (FindLiveObjects: 0.160300 ms CreateObjectMapping: 0.045900 ms MarkObjects: 1.686500 ms  DeleteObjects: 0.013600 ms)
+Received Import Request.
+  Time since last request: 2.218069 seconds.
+  path: Assets/HiryuTK/Shader/Shader2_Magma 1.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader2_Magma 1.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0853378a9ad01c0e00e403852aa3b27') in 0.008133 seconds
+  Import took 0.010661 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000540 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.684 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.1 MB.
-System memory in use after: 64.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1713.
-Total: 1.512100 ms (FindLiveObjects: 0.172400 ms CreateObjectMapping: 0.050500 ms MarkObjects: 1.260900 ms  DeleteObjects: 0.027300 ms)
+Received Import Request.
+  Time since last request: 3.400378 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_S.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_S.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f31a08f504f12f435939dbbbbb57ab9') in 0.007615 seconds
+  Import took 0.010090 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000689 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.659 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.2 MB.
-System memory in use after: 64.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1715.
-Total: 2.214800 ms (FindLiveObjects: 0.248000 ms CreateObjectMapping: 0.067200 ms MarkObjects: 1.879200 ms  DeleteObjects: 0.018800 ms)
+Received Import Request.
+  Time since last request: 6.101967 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_S.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_S.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1e20aee939cbaa07aa1e8a99236b753') in 0.003301 seconds
+  Import took 0.005987 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000565 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.696 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.3 MB.
-System memory in use after: 64.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1717.
-Total: 1.482700 ms (FindLiveObjects: 0.110900 ms CreateObjectMapping: 0.030600 ms MarkObjects: 1.329300 ms  DeleteObjects: 0.011100 ms)
+Received Import Request.
+  Time since last request: 1295.227834 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_S.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_S.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2757b65144beabebdb4ce696ef8a1e9') in 0.003569 seconds
+  Import took 0.006186 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001004 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.932 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.3 MB.
-System memory in use after: 64.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1719.
-Total: 1.727800 ms (FindLiveObjects: 0.151300 ms CreateObjectMapping: 0.043200 ms MarkObjects: 1.519800 ms  DeleteObjects: 0.012300 ms)
+Received Import Request.
+  Time since last request: 3.937551 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_S.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_S.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81ed2f9781abc6e4d0c128c84d8cd836') in 0.003943 seconds
+  Import took 0.006754 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000585 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.753 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
-
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.5 MB.
-System memory in use after: 63.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1721.
-Total: 1.592200 ms (FindLiveObjects: 0.144900 ms CreateObjectMapping: 0.041600 ms MarkObjects: 1.392200 ms  DeleteObjects: 0.012500 ms)
+Received Import Request.
+  Time since last request: 4.296911 seconds.
+  path: Assets/HiryuTK/Shader/hader3_MagmaFixed.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/hader3_MagmaFixed.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e174a0b98e9958263edd715af378eb') in 0.007078 seconds
+  Import took 0.009685 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000548 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.704 seconds
-Platform modules already initialized, skipping
-OnLevelWasLoaded was found on MusicPlayer
-This message has been deprecated and will be removed in a later version of Unity.
-Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+Received Import Request.
+  Time since last request: 3.120786 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_MagmaFixed.shader
+  artifactKey: Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_MagmaFixed.shader using Guid(c4f3117be74d65342b6d59bd3e053318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9013923e990b6f31ded453ede108bff6') in 0.008198 seconds
+  Import took 0.010909 seconds .
 
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1211 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 63.5 MB.
-System memory in use after: 63.6 MB.
+========================================================================
+Received Import Request.
+  Time since last request: 2.982523 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_MagmaFixed 1.shader
+  artifactKey: Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_MagmaFixed 1.shader using Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dab874bad4d1d0e6afd2f13f256c90b') in 0.007527 seconds
+  Import took 0.009495 seconds .
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1723.
-Total: 1.751100 ms (FindLiveObjects: 0.150800 ms CreateObjectMapping: 0.039300 ms MarkObjects: 1.532500 ms  DeleteObjects: 0.027400 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000523 seconds.
+  path: Assets/HiryuTK/Shader/Shader3_MagmaFixed 1.shader
+  artifactKey: Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader3_MagmaFixed 1.shader using Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dab874bad4d1d0e6afd2f13f256c90b') in 0.003365 seconds
+  Import took 0.005754 seconds .
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 4.443011 seconds.
+  path: Assets/HiryuTK/Shader/Shader4_UV.shader
+  artifactKey: Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader4_UV.shader using Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666606a55c38000616ab9d9eba54ab95') in 0.007790 seconds
+  Import took 0.010204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.027395 seconds.
+  path: Assets/HiryuTK/Shader/Shader4_UV.shader
+  artifactKey: Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HiryuTK/Shader/Shader4_UV.shader using Guid(ae47e67c51354014d905128dabbab744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49033354fbcda58e494497cdfe01ff7a') in 0.003510 seconds
+  Import took 0.006015 seconds .
+
