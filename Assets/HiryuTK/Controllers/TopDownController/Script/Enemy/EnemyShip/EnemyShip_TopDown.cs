@@ -34,20 +34,23 @@ namespace HiryuTK.TopDownController
 
         }
 
-        //private void OnTriggerEnter2D(Collider2D collision)
-        //{
-        //    if (Settings_TopDownController.Instance.IsTargetOnPlayerLayer(collision.gameObject) ||
-        //        Settings_TopDownController.Instance.IsTargetOnGroundLayer(collision.gameObject) ||
-        //        Settings_TopDownController.Instance.IsTargetOnEnemyLayer(collision.gameObject))
-        //    {
-        //        Despawn();
-        //    }
-        //}
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (Settings_TopDownController.Instance.IsTargetOnPlayerLayer(collision.gameObject))
+            {
+                PlayerTopDown3DController p = collision.GetComponent<PlayerTopDown3DController>();
+                if (p != null)
+                {
+                    p.DamagePlayer(transform.position, 1);
+                    Despawn();
+                }
+            }
+        }
 
-        //private void OnDrawGizmosSelected()
-        //{
-        //    Gizmos.DrawSphere(transform.position, neighborRadius);
-        //}
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.DrawSphere(transform.position, neighborRadius);
+        }
         #endregion
 
         #region Base class

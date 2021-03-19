@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -130,17 +131,18 @@ namespace HiryuTK.TopDownController
             if (currentStateType != ShipStates.Hurt)
             {
                 Status.health -= damage;
-                if (Status.health <= 0)
-                {
-                    Status.health = 0;
-                    uiM.SetDeathScreenVisibility(true);
-                    SwitchToNewState(ShipStates.Dead);
-                }
-                else
-                {
-                    SwitchToNewState(ShipStates.Hurt);
-                }
-                uiM.SetHealth(Status.health / Status.maxHealth);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                //if (Status.health <= 0)
+                //{
+                //    Status.health = 0;
+                //    uiM.SetDeathScreenVisibility(true);
+                //    SwitchToNewState(ShipStates.Dead);
+                //}
+                //else
+                //{
+                //    SwitchToNewState(ShipStates.Hurt);
+                //}
+                //uiM.SetHealth(Status.health / Status.maxHealth);
             }
         }
 

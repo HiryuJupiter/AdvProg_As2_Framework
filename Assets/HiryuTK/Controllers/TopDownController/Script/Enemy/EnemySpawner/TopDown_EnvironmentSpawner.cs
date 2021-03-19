@@ -21,20 +21,17 @@ namespace HiryuTK.TopDownController
         {
             settings    = Settings_TopDownController.Instance;
             poolM       = ObjectPoolManager_TopDown.instance;
-            Spawn(5);
+            Spawn();
         }
 
-        private void Spawn(int count)
+        private void Spawn()
         {
-            StartCoroutine(DoSpawn(1));
+            StartCoroutine(DoSpawn());
         }
 
-        private IEnumerator DoSpawn(int count)
+        private IEnumerator DoSpawn()
         {
-            
-            //RefreshTimer();
-
-            while (count > 0)
+            while (true)
             {
                 if (timer > 0f)
                 {
@@ -42,12 +39,10 @@ namespace HiryuTK.TopDownController
                 }
                 else
                 {
-                    //if (Random.Range(0, 2) == 0) 
-                    //    SpawnAsteroid();
-                    //else
-                    //    SpawnEnemyShip();
-                    SpawnEnemyShip();
-                    count--;
+                    if (Random.Range(0, 2) == 0)
+                        SpawnAsteroid();
+                    else
+                        SpawnEnemyShip();
                     RefreshTimer();
                 }
                 yield return null;

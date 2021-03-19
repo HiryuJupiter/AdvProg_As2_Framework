@@ -37,7 +37,10 @@ namespace HiryuTK.TopDownController
 
         private void Shoot()
         {
-            poolM.SpawnPlayerBullet(player.ShootPoint.position, player.ShootPoint.rotation);
+            Quaternion r = Quaternion.LookRotation(Vector3.forward,
+                Camera.main.ScreenToWorldPoint(Input.mousePosition) - player.ShootPoint.position);
+
+            poolM.SpawnPlayerBullet(player.ShootPoint.position, r);
             ResetTimer();
             //MonoBehaviour.Instantiate(bulletSpawner.Bullet, 
             //    player.ShootPoint.position, player.ShootPoint.rotation);
