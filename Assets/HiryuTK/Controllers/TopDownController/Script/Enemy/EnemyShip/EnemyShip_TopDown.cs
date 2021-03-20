@@ -17,43 +17,8 @@ namespace HiryuTK.TopDownController
         private bool checkingForCollision;
         private bool alive;
 
-        #region Mono
 
-
-        private void FixedUpdate()
-        {
-            //transform.rotation = Quaternion.LookRotation(moveDir, -Vector3.forward);  //Lerp this later
-
-            //Rotate towards player
-            Vector3 dirToPlayer = player.transform.position - transform.position;
-            Quaternion targetRot = Quaternion.LookRotation(Vector3.forward, dirToPlayer);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, settings.EnemyRotation * Time.deltaTime);
-
-            transform.Translate(transform.up * settings.EnemyMove * Time.deltaTime, Space.World);
-            Debug.DrawRay(transform.position, transform.up, Color.magenta, 10f);
-
-        }
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (Settings_TopDownController.Instance.IsTargetOnPlayerLayer(collision.gameObject))
-            {
-                PlayerTopDown3DController p = collision.GetComponent<PlayerTopDown3DController>();
-                if (p != null)
-                {
-                    p.DamagePlayer(transform.position, 1);
-                    Despawn();
-                }
-            }
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.DrawSphere(transform.position, neighborRadius);
-        }
-        #endregion
-
-        #region Base class
+        #region Object pool
         public override void InitialSpawn(Pool pool)
         {
             base.InitialSpawn(pool);
@@ -68,7 +33,7 @@ namespace HiryuTK.TopDownController
             transform.position = p;
             transform.rotation = r;
             moveDir = transform.up;
-            Debug.DrawRay(transform.position, moveDir, Color.yellow, 10f);
+            //Debug.DrawRay(transform.position, moveDir, Color.yellow, 10f);
             StartCoroutine(DetectOutOfBounds());
         }
 
@@ -78,6 +43,41 @@ namespace HiryuTK.TopDownController
             Debug.Log("Ship destroyed");
             checkingForCollision = false;
             base.Despawn();
+        }
+        #endregion
+
+        #region Mono
+
+
+        private void FixedUpdate()
+        {
+            //transform.rotation = Quaternion.LookRotation(moveDir, -Vector3.forward);  //Lerp this later
+
+            //Rotate towards player
+            Vector3 dirToPlayer = player.transform.position - transform.position;
+            Quaternion targetRot = Quaternion.LookRotation(Vector3.forward, dirToPlayer);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, settings.EnemyRotation * Time.deltaTime);
+
+            transform.Translate(transform.up * settings.EnemyMove * Time.deltaTime, Space.World);
+            //Debug.DrawRay(transform.position, transform.up, Color.magenta, 10f);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (settings.IsTargetPlayer(collision.gameObject))
+            {
+                PlayerTopDown3DController p = collision.GetComponent<PlayerTopDown3DController>();
+                if (p != null)
+                {
+                    p.DamagePlayer(transform.position, 1);
+                    Despawn();
+                }
+            }
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.DrawSphere(transform.position, neighborRadius);
         }
         #endregion
 

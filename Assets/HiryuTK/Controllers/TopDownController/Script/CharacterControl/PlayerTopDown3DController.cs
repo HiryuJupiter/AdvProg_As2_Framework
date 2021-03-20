@@ -84,7 +84,7 @@ namespace HiryuTK.TopDownController
         {
             //Settings_TopDownController.Instance.IsTargetOnEnemyLayer(collision.gameObject) ||
             if (
-                Settings_TopDownController.Instance.IsTargetOnGroundLayer(collision.gameObject))
+                Settings_TopDownController.Instance.IsTargetGround(collision.gameObject))
             {
                 Debug.Log("player hits damaging object");
                 collision.gameObject.GetComponent<IDamagable>().TakeDamage(1);

@@ -26,12 +26,12 @@ namespace HiryuTK.TopDownController
 
         private void Spawn()
         {
-            StartCoroutine(DoSpawn());
+            StartCoroutine(DoSpawn(5));
         }
 
-        private IEnumerator DoSpawn()
+        private IEnumerator DoSpawn(int spawnCount)
         {
-            while (true)
+            while (spawnCount > 0)
             {
                 if (timer > 0f)
                 {
@@ -39,10 +39,12 @@ namespace HiryuTK.TopDownController
                 }
                 else
                 {
-                    if (Random.Range(0, 2) == 0)
-                        SpawnAsteroid();
-                    else
-                        SpawnEnemyShip();
+                    SpawnAsteroid();
+                    //if (Random.Range(0, 2) == 0)
+                    //    SpawnAsteroid();
+                    //else
+                    //    SpawnEnemyShip();
+                    spawnCount--;
                     RefreshTimer();
                 }
                 yield return null;

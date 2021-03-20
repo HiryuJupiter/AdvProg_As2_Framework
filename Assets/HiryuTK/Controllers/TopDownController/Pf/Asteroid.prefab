@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 8218083341002654754}
   - component: {fileID: 7210817960215553887}
   m_Layer: 8
-  m_Name: Pf_Asteroid
-  m_TagString: Untagged
+  m_Name: Asteroid
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,6 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8709957323254092184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,10 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1eae2bb071d9394a8e9966ca4713039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedMax: 4
-  rotationSpeedMax: 1
-  scaleMax: 1
-  scaleMin: 0.4
 --- !u!61 &7210817960215553887
 BoxCollider2D:
   m_ObjectHideFlags: 0

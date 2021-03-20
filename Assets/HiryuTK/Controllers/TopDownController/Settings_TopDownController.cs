@@ -9,15 +9,15 @@ namespace HiryuTK.TopDownController
         public static Settings_TopDownController Instance { get; private set; }
 
         [Header("Stats")]
-        [SerializeField] private int playerHealth;
+        [SerializeField] private int playerHealth = 3;
         public LayerMask PlayerMaxHealth => playerHealth;
 
         [Header("Abilities")]
-        [SerializeField] private float basicBullet_speed = 50f;
+        [SerializeField] private float basicBullet_speed = 20f;
         [SerializeField] private float cd_BasicAttack = 1f;
-        [SerializeField] private float cd_Mining = 0.5f;
-        [SerializeField] private float   miningPower = 0.1f;
-        [SerializeField] private float miningDistance = 2f;
+        [SerializeField] private float cd_Mining = 0.1f;
+        [SerializeField] private float   miningPower = 5f;
+        [SerializeField] private float miningDistance = 50f;
         public float BasicBullet_speed => basicBullet_speed;
         public float CD_BasicAttack => cd_BasicAttack;
         public float CD_Mining => cd_Mining;
@@ -33,9 +33,9 @@ namespace HiryuTK.TopDownController
         public LayerMask EnemyLayer => enemyLayer;
 
         [Header("Player Movement")]
-        [SerializeField] private float moveSpeed = 2f;
-        [SerializeField] private float moveAcceleration = 5f;
-        [SerializeField] private float rotationSpeed = 1f; //50f
+        [SerializeField] private float moveSpeed = 1f;
+        [SerializeField] private float moveAcceleration = 1f;
+        [SerializeField] private float rotationSpeed = 20f; //50f
         [SerializeField] private float rotationAccleration= 1f; //50f
         public float MoveSpeed => moveSpeed;
         public float MoveAcceleration => moveAcceleration;
@@ -48,13 +48,16 @@ namespace HiryuTK.TopDownController
         public float EnemyMove => enemyMove;
         public float EnemyRotation => enemyRotation;
 
+        [Header("Asteroid Movement")]
+        [SerializeField] private float asteroidMove =  15f;
+        [SerializeField] private float asteroidRotation = 10f;
+        public float AsteroidMove => asteroidMove;
+        public float AsteroidRotation => asteroidRotation;
 
         [Header("Hurt State")]
         [SerializeField] private float hurtSlideSpeed = 20f; //50f
-        [SerializeField] private Vector2 hurtDirection = Vector2.zero;
         [SerializeField] private float hurtDuration = 0.5f;
         public float HurtSlideSpeed => hurtSlideSpeed;
-        public Vector2 HurtDirection => hurtDirection;
         public float HurtDuration => hurtDuration;
 
         public float ScreenBound_Top { get; private set; }
@@ -144,9 +147,12 @@ namespace HiryuTK.TopDownController
             //}
         }
 
-        public bool IsTargetOnPlayerLayer(GameObject go) => PlayerLayer == (PlayerLayer | 1 << go.layer);
-        public bool IsTargetOnEnemyLayer(GameObject go) => EnemyLayer == (EnemyLayer | 1 << go.layer);
-        public bool IsTargetOnGroundLayer(GameObject go) => GroundLayer == (GroundLayer | 1 << go.layer);
+        //public bool IsTargetOnPlayerLayer(GameObject go) => PlayerLayer == (PlayerLayer | 1 << go.layer);
+        //public bool IsTargetOnEnemyLayer(GameObject go) => EnemyLayer == (EnemyLayer | 1 << go.layer);
+        //public bool IsTargetOnGroundLayer(GameObject go) => GroundLayer == (GroundLayer | 1 << go.layer);
+        public bool IsTargetPlayer(GameObject go) => go.tag == "Player";
+        public bool IsTargetEnemy(GameObject go) => go.tag == "Enemy";
+        public bool IsTargetGround(GameObject go) => go.tag == "Ground";
 
         public Vector2 RandomSpawnPoint ()
         {

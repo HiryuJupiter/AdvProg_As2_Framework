@@ -6,10 +6,8 @@ namespace HiryuTK.TopDownController
 {
     public class Asteroid : PoolObject, IDamagable, IMineable
     {
-        [SerializeField] private float moveSpeedMax = 15f;
-        [SerializeField] private float rotationSpeedMax = 10f;
-        [SerializeField] private float scaleMax = 1f;
-        [SerializeField] private float scaleMin = .2f;
+        private const float ScaleMax = 1f;
+        private const float ScaleMin = .4f;
 
         bool alive;
         float moveSpeed;
@@ -19,7 +17,7 @@ namespace HiryuTK.TopDownController
         Settings_TopDownController settings;
 
         #region Interface
-        
+
         public void TakeDamage(int amount)
         {
             Despawn();
@@ -57,12 +55,12 @@ namespace HiryuTK.TopDownController
             base.Activation(p, r);
 
             //Initialize scale, speed, and rotation
-            float s = Random.Range(scaleMin, scaleMax);
+            float s = Random.Range(ScaleMin, ScaleMax);
             transform.localScale *= s;
 
-            float percentage = (s - scaleMin) / (scaleMax - scaleMin);
-            rotationSpeed = rotationSpeedMax * (1 - percentage);
-            moveSpeed = moveSpeedMax * (1 - percentage * .5f);
+            float percentage = (s - ScaleMin) / (ScaleMax - ScaleMin);
+            rotationSpeed = settings.AsteroidRotation * (1 - percentage);
+            moveSpeed = settings.AsteroidMove * (1 - percentage * .5f);
 
             rawForward = transform.up;
 
