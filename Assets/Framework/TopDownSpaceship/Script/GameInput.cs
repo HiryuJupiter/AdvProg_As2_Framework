@@ -16,13 +16,13 @@ namespace HiryuTK.AsteroidsTopDownController
         public static bool JumpBtn { get; set; }
         public static bool JumpBtnUp { get; set; }
 
-        private void Awake()
+        void Awake()
         {
             //Lazy singleton
             Instance = this;
         }
 
-        private void Update()
+        void Update()
         {
             //For updating input
             DirectionInputUpdate();
@@ -32,7 +32,7 @@ namespace HiryuTK.AsteroidsTopDownController
         /// <summary>
         /// For checking directional key inputs
         /// </summary>
-        private void DirectionInputUpdate()
+        void DirectionInputUpdate()
         {
             //LEFT - RIGHT
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -66,7 +66,7 @@ namespace HiryuTK.AsteroidsTopDownController
         /// <summary>
         /// For checking action key inputs
         /// </summary>
-        private void ActionInputUpdate()
+        void ActionInputUpdate()
         {
             JumpBtnDown = Input.GetKeyDown(KeyCode.Space);
             JumpBtn     = Input.GetKey(KeyCode.Space);

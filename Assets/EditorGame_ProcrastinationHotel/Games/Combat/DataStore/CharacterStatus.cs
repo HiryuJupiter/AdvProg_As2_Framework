@@ -10,6 +10,10 @@ namespace HiryuTK.GameRoomService
 
         public int Hp { get; private set; } = MaxHP;
 
+        /// <summary>
+        /// Modify the health value with an integer
+        /// </summary>
+        /// <param name="amount"></param>
         public void ModifyHealth(int amount)
         {
             Hp += amount;

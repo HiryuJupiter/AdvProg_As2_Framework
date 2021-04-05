@@ -6,21 +6,21 @@ namespace HiryuTK.AsteroidsTopDownController
     /// <summary>
     /// For setting the game's settings all in one place
     /// </summary>
-    [DefaultExecutionOrder(-90000000)]
+    [DefaultExecutionOrder(-10000)]
     public class Settings : MonoBehaviour
     {
         #region Field & Properties
 
         [Header("Stats")]
-        [SerializeField] private int playerHealth = 3;
+        [SerializeField] int playerHealth = 3;
         public LayerMask PlayerMaxHealth => playerHealth;
 
         [Header("Abilities")]
-        [SerializeField] private float basicBulletSeed = 20f;
-        [SerializeField] private float basicAttackCD = 1f;
-        [SerializeField] private float miningCD = 0.1f;
-        [SerializeField] private float miningPower = 5f;
-        [SerializeField] private float miningDistance = 50f;
+        [SerializeField] float basicBulletSeed = 20f;
+        [SerializeField] float basicAttackCD = 1f;
+        [SerializeField] float miningCD = 0.1f;
+        [SerializeField] float miningPower = 5f;
+        [SerializeField] float miningDistance = 50f;
         public float BasicBulletSpeed => basicBulletSeed;
         public float BasicAttackCD => basicAttackCD;
         public float MiningCD => miningCD;
@@ -28,59 +28,58 @@ namespace HiryuTK.AsteroidsTopDownController
         public float MiningDistance => miningDistance;
 
         [Header("Layers")]
-        [SerializeField] private LayerMask playerLayer;
-        [SerializeField] private LayerMask groundLayer;
-        [SerializeField] private LayerMask enemyLayer;
+        [SerializeField] LayerMask playerLayer;
+        [SerializeField] LayerMask groundLayer;
+        [SerializeField] LayerMask enemyLayer;
         public LayerMask PlayerLayer => playerLayer;
         public LayerMask GroundLayer => groundLayer;
         public LayerMask EnemyLayer => enemyLayer;
 
         [Header("Player Movement")]
-        [SerializeField] private float moveSpeed = 1f;
-        [SerializeField] private float moveAcceleration = 1f;
-        [SerializeField] private float rotationSpeed = 20f; //50f
-        [SerializeField] private float rotationAccleration = 1f; //50f
+        [SerializeField] float moveSpeed = 1f;
+        [SerializeField] float moveAcceleration = 1f;
+        [SerializeField] float rotationSpeed = 20f; //50f
+        [SerializeField] float rotationAccleration = 1f; //50f
         public float MoveSpeed => moveSpeed;
         public float MoveAcceleration => moveAcceleration;
         public float RotationSpeed => rotationSpeed;
         public float RotationAccleration => rotationAccleration;
 
         [Header("Enemy Movement")]
-        [SerializeField] private float enemyMove = 2f;
-        [SerializeField] private float enemyRotation = 100f;
+        [SerializeField] float enemyMove = 2f;
+        [SerializeField] float enemyRotation = 100f;
         public float EnemyMove => enemyMove;
         public float EnemyRotation => enemyRotation;
 
         [Header("Asteroid Movement")]
-        [SerializeField] private float asteroidMove = 15f;
-        [SerializeField] private float asteroidRotation = 10f;
+        [SerializeField] float asteroidMove = 15f;
+        [SerializeField] float asteroidRotation = 10f;
         public float AsteroidMove => asteroidMove;
         public float AsteroidRotation => asteroidRotation;
+                
+        float[] xDivisionPoints;
+        float[] yDivisionPoints;
 
-        //Private field
-        private float[] xDivisionPoints;
-        private float[] yDivisionPoints;
-
-        private float screenBound_Top;
-        private float screenBound_Bot;
-        private float screenBound_Left;
-        private float screenBound_Right;
-        private float innerSideline_Top;
-        private float innerSideline_Bot;
-        private float innerSideline_Left;
-        private float innerSideline_Right;
-        private float outerSideline_Top;
-        private float outerSideline_Bot;
-        private float outerSideline_Left;
-        private float outerSideline_Right;
+        float screenBound_Top;
+        float screenBound_Bot;
+        float screenBound_Left;
+        float screenBound_Right;
+        float innerSideline_Top;
+        float innerSideline_Bot;
+        float innerSideline_Left;
+        float innerSideline_Right;
+        float outerSideline_Top;
+        float outerSideline_Bot;
+        float outerSideline_Left;
+        float outerSideline_Right;
 
         //Properties
         public static Settings Instance { get; private set; }
-        private bool RandomBool => Random.Range(0, 2) == 0;
+        bool RandomBool => Random.Range(0, 2) == 0;
         #endregion
 
 
-        private void Awake()
+        void Awake()
         {
             //Lazy singlton
             Instance = this;

@@ -6,6 +6,9 @@ namespace HiryuTK.GameRoomService
 {
     public static class CombatUtil
     {
+        /// <summary>
+        /// Get corresponding portrait for P1
+        /// </summary>
         public static string GetP1Portrait(CombatStance stance)
              => stance switch
             {
@@ -15,7 +18,9 @@ namespace HiryuTK.GameRoomService
                 _ => CombatPortraits.playerPortrait_Idle
             };
 
-
+        /// <summary>
+        /// Get corresponding portrait for P2
+        /// </summary>
         public static string GetP2ortrait(CombatStance stance)
             => stance switch
             {
@@ -25,6 +30,9 @@ namespace HiryuTK.GameRoomService
                 _ => CombatPortraits.enemyPortrait_Idle
             };
 
+        /// <summary>
+        /// Check if target can take damage
+        /// </summary>
         public static bool CanTargetTakeDamage(CombatStance targetStance, CombatStance bulletStance)
         {
             return bulletStance switch

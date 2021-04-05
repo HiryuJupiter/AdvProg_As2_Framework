@@ -7,12 +7,12 @@ namespace HiryuTK.AsteroidsTopDownController
     public class PlayerMiningBeam : MonoBehaviour
     {
         //Fields
-        private float miningCooldownTimer;
-        private PlayerTopDown3DController player;
-        private Settings settings;
-        private bool isSetup;
+        float miningCooldownTimer;
+        PlayerTopDown3DController player;
+        Settings settings;
+        bool isSetup;
 
-        private bool MiningCooldownReady => miningCooldownTimer <= 0f;
+        bool MiningCooldownReady => miningCooldownTimer <= 0f;
 
         //This has to be set up before it can be used
         public void Setup(PlayerTopDown3DController player)
@@ -53,7 +53,7 @@ namespace HiryuTK.AsteroidsTopDownController
         /// <summary>
         /// Shoot the mining beam using a raycast towards the mouse location
         /// </summary>
-        private void ShootMiningBeam()
+        void ShootMiningBeam()
         {
             //Convert mouse pos from screen to world pos, then get the direction from player to mouse, then do raycast in that direction
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -96,13 +96,13 @@ namespace HiryuTK.AsteroidsTopDownController
         }
 
         //Turn off mining beam
-        private void TurnOffMiningBeam()
+        void TurnOffMiningBeam()
         {
             player.LineRenderer.enabled = false;
         }
 
         //Mine the asteroid passed in
-        private void MineAsteroid(IMineable asteroid)
+        void MineAsteroid(IMineable asteroid)
         {
             asteroid.Mine(settings.MiningPower);
             player.AddMoney(10);

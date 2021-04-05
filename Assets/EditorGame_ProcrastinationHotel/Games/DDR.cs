@@ -21,6 +21,9 @@ namespace HiryuTK.GameRoomService
 
         GUIStyle centeredLabel;
 
+        /// <summary>
+        /// Initializes variables used in this window
+        /// </summary>
         public void Initialize()
         {
             initialized = true;
@@ -32,29 +35,32 @@ namespace HiryuTK.GameRoomService
             InitializeNotes();
         }
 
-        private void OnGUI()
+        /// <summary>
+        /// Draws the GUI stuff
+        /// </summary>
+        void OnGUI()
         {
-            if (!initialized || centeredLabel == null)
-                CacheGUIStyle();
+            if (!initialized)
+                Initialize();
 
             DrawHighScore();
             DrawNotes();
         }
 
-        void CacheGUIStyle ()
-        {
-            centeredLabel = new GUIStyle(GUI.skin.label);
-            centeredLabel.alignment = TextAnchor.MiddleCenter;
-        }
-
+        /// <summary>
+        /// Update
+        /// </summary>
         void OnInspectorUpdate()
         {
-            if (notes == null)
+            if (!initialized)
                 InitializeNotes();
             TickMoveTimer();
         }
 
         #region Move notes
+        /// <summary>
+        /// Initialize the initial note array that are to be displayed when the game starts
+        /// </summary>
         void InitializeNotes()
         {
             notes = new bool[Columns, Rows];
@@ -68,6 +74,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Update the timer that moves the notes
+        /// </summary>
         void TickMoveTimer ()
         {
             if (moveTimer > 0)
@@ -81,6 +90,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Move the notes down
+        /// </summary>
         void MoveNotes ()
         {
             //If final row has a note, then wipe player score
@@ -113,6 +125,9 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Highscore
+        /// <summary>
+        /// Display highscore on screen
+        /// </summary>
         void DrawHighScore ()
         {
             EditorGUILayout.Space(20);
@@ -123,11 +138,11 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Draw notes
+        /// <summary>
+        /// Draw notes on screen with seperation lines and stuff
+        /// </summary>
         void DrawNotes()
         {
-            if (!initialized || centeredLabel == null)
-                CacheGUIStyle();
-
             DrawSeperationLine();
 
             //First zone
@@ -160,11 +175,14 @@ namespace HiryuTK.GameRoomService
 
             DrawSeperationLine();
             DrawSeperationLine();
-            DrawButtonText();
+            DrawButtonSection();
             DrawSeperationLine();
         }
 
-        void DrawButtonText()
+        /// <summary>
+        /// Draw the button section that the player can interact with
+        /// </summary>
+        void DrawButtonSection()
         {
             GUILayout.BeginHorizontal();
             for (int c = 0; c < Columns; c++)
@@ -176,6 +194,10 @@ namespace HiryuTK.GameRoomService
             GUILayout.EndHorizontal();
         }
 
+        /// <summary>
+        /// Encapsulates the actual button drawing logic for the button-section
+        /// </summary>
+        /// <param name="xColumn"></param>
         void DrawButton(int xColumn)
         {
             if (GUILayout.Button(GetArrowString(xColumn), GUILayout.Width(20)))
@@ -191,6 +213,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Draws a seperation line on screen
+        /// </summary>
         void DrawSeperationLine()
         {
             GUILayout.BeginHorizontal();
@@ -203,6 +228,9 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Minor methods
+        /// <summary>
+        /// When the player hits a note
+        /// </summary>
         void HitNote (int xColumn)
         {
             currentScore++;
@@ -212,6 +240,9 @@ namespace HiryuTK.GameRoomService
             CheckAchievement();
         }
 
+        /// <summary>
+        /// Check if player has unlocked an achievement
+        /// </summary>
         void CheckAchievement()
         {
             if (currentScore >= 22)
@@ -223,6 +254,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// When the player misses a note
+        /// </summary>
         void MissedNote ()
         {
             if (currentScore > GameData.DDRHighScore)
@@ -231,6 +265,9 @@ namespace HiryuTK.GameRoomService
             Repaint();
         }
 
+        /// <summary>
+        /// For easily getting an arrow string
+        /// </summary>
         string GetArrowString(int index)
         {
             return index switch
@@ -243,7 +280,10 @@ namespace HiryuTK.GameRoomService
             };
         }
 
-        private void OnDestroy()
+        /// <summary>
+        /// When the window closes
+        /// </summary>
+        void OnDestroy()
         {
             GameData.SaveData();
         }

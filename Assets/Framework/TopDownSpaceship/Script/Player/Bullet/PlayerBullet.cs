@@ -9,8 +9,8 @@ namespace HiryuTK.AsteroidsTopDownController
     public class PlayerBullet : PoolObject
     {
         //References
-        private Settings settings;
-        private Rigidbody2D rb;
+        Settings settings;
+        Rigidbody2D rb;
 
         #region Object pool
         public override void InitialSpawn(Pool pool)
@@ -29,7 +29,7 @@ namespace HiryuTK.AsteroidsTopDownController
         }
         #endregion
 
-        private void FixedUpdate()
+        void FixedUpdate()
         {
             //Despawn this object when it goes outside the screen
             if (settings.IsOutOfBounds(transform.position))
@@ -38,7 +38,7 @@ namespace HiryuTK.AsteroidsTopDownController
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        void OnTriggerEnter2D(Collider2D collision)
         {
             //Make this able to damage enemies and asteroids upon collision
             if (Settings.Instance.IsTargetOnEnemyLayer(collision.gameObject) ||

@@ -69,6 +69,9 @@ namespace HiryuTK.GameRoomService
         bool p1Alive => p1Stance != CombatStance.Dead;
         bool p2Alive => p2Stance != CombatStance.Dead;
 
+        /// <summary>
+        /// Initalize variables 
+        /// </summary>
         public void Initialize()
         {
             initialized = true;
@@ -84,7 +87,10 @@ namespace HiryuTK.GameRoomService
             { alignment = TextAnchor.MiddleCenter };
         }
 
-        private void OnGUI()
+        /// <summary>
+        /// Draws the corresponding GUI elements
+        /// </summary>
+        void OnGUI()
         {
             if (!initialized)
                 Initialize();
@@ -100,6 +106,9 @@ namespace HiryuTK.GameRoomService
         }
 
         #region Draw GUI
+        /// <summary>
+        /// Display player 1 stats on the screen
+        /// </summary>
         void DisplayP1Stats()
         {
             GUI.Label(new Rect(P1PosX - 5, 5, 100, 20), "Player");
@@ -114,6 +123,9 @@ namespace HiryuTK.GameRoomService
             EditorGUI.ProgressBar(new Rect(15, 90, HealthBarWidth, 15), (float)player.Hp / 100, "HP");
         }
 
+        /// <summary>
+        /// Display player 2 stats on the screen
+        /// </summary>
         void DisplayP2Stats()
         {
             if (!initialized)
@@ -132,6 +144,9 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Log
+        /// <summary>
+        /// Display the log content
+        /// </summary>
         void DisplayLog()
         {
             EditorGUILayout.Space(60);
@@ -140,13 +155,16 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Ability buttons
+        /// <summary>
+        /// Display the ability buttons
+        /// </summary>
         void DisplayAbilityButtons()
         {
             //Jump
             if (GUI.Button(new Rect(5, 150, buttonWidth, 30), "Jump"))
             {
                 p1Stance = CombatStance.Jump;
-                    LogTextWhenPlayersAlive("Player jumps");
+                LogTextWhenPlayersAlive("Player jumps");
             }
             if (GUI.Button(new Rect(5 + buttonWidth, 150, buttonWidth, 30), "Duck"))
             {
@@ -166,6 +184,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Disply the respawn button on the screen
+        /// </summary>
         void DisplayRespawnButton()
         {
             if (GUI.Button(new Rect(5, 150, Width - 5, 60), "Respawn"))
@@ -174,6 +195,10 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Shoot a button starting at the position corresponding the the player or enemy's stance
+        /// </summary>
+        /// <param name="isP1"></param>
         void Shoot(bool isP1)
         {
             if (isP1)
@@ -192,6 +217,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Display bullets on screen as arrows
+        /// </summary>
         void DrawBullets()
         {
             GUI.Box(new Rect(shootZoneLeft, CharPosY, shootZoneWidth, CharHeight), "");
@@ -205,6 +233,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Helper method for getting the firing position
+        /// </summary>
         Vector2Int GetBulletFiringPosition(bool isP1) =>
             new Vector2Int(
                 isP1 ? shootZoneLeft : shootZoneLeft + shootZoneWidth,
@@ -220,6 +251,9 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Spawn character status
+        /// <summary>
+        /// Respawns the player and displays a log on screen
+        /// </summary>
         void RespawnPlayer()
         {
             logText = "Player respawns";
@@ -230,6 +264,9 @@ namespace HiryuTK.GameRoomService
             p1Stance = CombatStance.Stand;
         }
 
+        /// <summary>
+        /// Respawns the enemy and displays a log on screen
+        /// </summary>
         void RespawnEnemy()
         {
             if (enemy == null)
@@ -241,6 +278,9 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         // ======= Updates ======= 
+        /// <summary>
+        /// Run update methods here
+        /// </summary>
         void OnInspectorUpdate()
         {
             if (!initialized)
@@ -253,6 +293,9 @@ namespace HiryuTK.GameRoomService
         }
 
         #region Bullet combat update
+        /// <summary>
+        /// Update the bullet's position on screen
+        /// </summary>
         void UpdateBulletPosition()
         {
             if (P1HasShotBullet)
@@ -280,8 +323,18 @@ namespace HiryuTK.GameRoomService
                     }
                 }
             }
+
+            //When bullets collide, destroy
+            if (p1Bullet == p2Bullet)
+            {
+                P1HasShotBullet = false;
+                P2HasShotBullet = false;
+            }
         }
 
+        /// <summary>
+        /// Handles when bullet reaches the end
+        /// </summary>
         void BulletReachedP1()
         {
             if (CombatUtil.CanTargetTakeDamage(p1Stance, p2BulletShotStance))
@@ -293,17 +346,23 @@ namespace HiryuTK.GameRoomService
                 LogTextWhenPlayersAlive("Player dodged a bullet!");
         }
 
+        /// <summary>
+        /// Handles when bullet reaches the end
+        /// </summary>
         void BulletReachedP2()
         {
             if (CombatUtil.CanTargetTakeDamage(p2Stance, p1BulletShotStance))
             {
-                LogTextWhenPlayersAlive( "Enemy got shot!");
+                LogTextWhenPlayersAlive("Enemy got shot!");
                 DealP2Dmg();
             }
             else
                 LogTextWhenPlayersAlive("Enemy dodged a bullet!");
         }
 
+        /// <summary>
+        /// Deal damage to the target and modies health
+        /// </summary>
         void DealP1Dmg()
         {
             player.ModifyHealth(-BulletDamage);
@@ -314,6 +373,10 @@ namespace HiryuTK.GameRoomService
             }
 
         }
+
+        /// <summary>
+        /// Deal damage to the target and modies health
+        /// </summary>
         void DealP2Dmg()
         {
             enemy.ModifyHealth(-BulletDamage);
@@ -330,6 +393,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Update the enemy respawn timer so we get a new enemy after one dies
+        /// </summary>
         void UpdateRespawnTimer()
         {
             if (p2RespawnTimer > 0)
@@ -342,6 +408,9 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region EnemyAI
+        /// <summary>
+        /// Runs the enemy AI code for shooting and moving
+        /// </summary>
         void EnemyAI()
         {
             if (!p2Alive)
@@ -378,14 +447,22 @@ namespace HiryuTK.GameRoomService
         #endregion
 
         #region Minor methods
-        void UpdateP1Portrait () => p1Portrait = CombatUtil.GetP1Portrait(p1Stance);
-        void UpdateP2Portrait () => p2Portrait = CombatUtil.GetP2ortrait(p2Stance);
-        private void OnDestroy()
+        //Expression body methods for readability
+        void UpdateP1Portrait() => p1Portrait = CombatUtil.GetP1Portrait(p1Stance);
+        void UpdateP2Portrait() => p2Portrait = CombatUtil.GetP2ortrait(p2Stance);
+
+        /// <summary>
+        /// When the window closes
+        /// </summary>
+        void OnDestroy()
         {
             GameData.SaveData();
         }
 
-        void LogTextWhenPlayersAlive (string text)
+        /// <summary>
+        /// Only logs this text if the player is alive. 
+        /// </summary>
+        void LogTextWhenPlayersAlive(string text)
         {
             if (p1Alive && p2Alive)
             {

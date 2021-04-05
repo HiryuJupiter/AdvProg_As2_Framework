@@ -15,21 +15,21 @@ namespace HiryuTK.AsteroidsTopDownController
     public class PlayerTopDown3DController : MonoBehaviour
     {
         #region Fields
-        [SerializeField] private Transform shootPoint;
-        [SerializeField] private LineRenderer lineRenderer;
+        [SerializeField] Transform shootPoint;
+        [SerializeField] LineRenderer lineRenderer;
 
         //Class and components
-        private Settings settings;
-        private UIManager uiManager;
+        Settings settings;
+        UIManager uiManager;
 
-        private Rigidbody2D rb;
-        private PlayerMiningBeam miningBeam;
-        private PlayerShootingModule gun;
+        Rigidbody2D rb;
+        PlayerMiningBeam miningBeam;
+        PlayerShootingModule gun;
 
         //Status 
-        private int Money;
-        private Vector2 velocity;
-        private float rotDelta;
+        int Money;
+        Vector2 velocity;
+        float rotDelta;
 
         //Properties
         public static PlayerTopDown3DController Instance { get; private set; }
@@ -60,12 +60,12 @@ namespace HiryuTK.AsteroidsTopDownController
         #endregion
 
         #region MonoBehiavor
-        private void Awake()
+        void Awake()
         {
             Instance = this;
         }
 
-        private void Start()
+        void Start()
         {
             //Reference and initialize
             settings = Settings.Instance;
@@ -79,7 +79,7 @@ namespace HiryuTK.AsteroidsTopDownController
             miningBeam.Setup(this);
         }
 
-        private void Update()
+        void Update()
         {
             //Every frame, update gun and mining beam
             ScreenWarp();
@@ -87,7 +87,7 @@ namespace HiryuTK.AsteroidsTopDownController
             miningBeam.TickUpdate();
         }
 
-        private void FixedUpdate()
+        void FixedUpdate()
         {
             //Movement updates
             UpdateMovement();
@@ -95,7 +95,7 @@ namespace HiryuTK.AsteroidsTopDownController
             ApplyRigidbodyVelocity();
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        void OnTriggerEnter2D(Collider2D collision)
         {
             //When htting enemy or asteroid...
             if (Settings.Instance.IsTargetOnEnemyLayer(collision.gameObject) || 
@@ -110,7 +110,7 @@ namespace HiryuTK.AsteroidsTopDownController
         #endregion
 
         #region Movement
-        private void UpdateMovement()
+        void UpdateMovement()
         {
             //The ship can only move forward
             float drive = Mathf.Clamp(GameInput.MoveY, 0f, 1f);
@@ -120,14 +120,14 @@ namespace HiryuTK.AsteroidsTopDownController
                 Time.deltaTime * settings.MoveAcceleration);
         }
 
-        private void UpdateRotation()
+        void UpdateRotation()
         {
             //Rotational changes should be applied slowly
             rotDelta = Mathf.Lerp(rotDelta, GameInput.MoveX, settings.RotationAccleration * Time.deltaTime);
             rb.rotation -= rotDelta * settings.RotationSpeed * Time.deltaTime;
         }
 
-        private void ApplyRigidbodyVelocity()
+        void ApplyRigidbodyVelocity()
         {
             //Movement is relative to ship's facing
             rb.velocity = transform.TransformDirection(velocity);
@@ -136,7 +136,7 @@ namespace HiryuTK.AsteroidsTopDownController
         /// <summary>
         /// Screenwarp when hitting screen boarder
         /// </summary>
-        private void ScreenWarp ()
+        void ScreenWarp ()
         {
             if (settings.TryGetScreenWarpPosition(transform.position, out Vector2 warpPosition))
             {

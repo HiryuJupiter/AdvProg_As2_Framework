@@ -7,7 +7,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
     public class EnemyShip : PoolObject, IDamagable
     {
         //Fields
-        private PlayerTopDown3DController player;
+        PlayerTopDown3DController player;
         Settings settings;
 
         #region Public
@@ -48,7 +48,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
         #endregion
 
         #region Mono
-        private void FixedUpdate()
+        void FixedUpdate()
         {
             //Rotate towards player when it is not dead
             if (player != null)
@@ -63,7 +63,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        void OnTriggerEnter2D(Collider2D collision)
         {
             //When hits the player, tell the player to take damage.
             if (settings.IsTargetOnPlayerLayer(collision.gameObject))

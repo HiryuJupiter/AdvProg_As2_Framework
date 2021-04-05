@@ -6,12 +6,12 @@ namespace HiryuTK.GameRoomService
 {
     public class CatFeeder : EditorWindow
     {
-        private const int PositionPhaseMax = 5;
-        private const int FoodCost = 2;
-        private const int WaterCost = 1;
-        private const string CatFaceString = "[^._.^] ﾉ彡";
+        const int PositionPhaseMax = 5;
+        const int FoodCost = 2;
+        const int WaterCost = 1;
+        const string CatFaceString = "[^._.^] ﾉ彡";
 
-        private const string CatImg1 = "" +
+        const string CatImg1 = "" +
         "          /^--^\\     \n" +
         "          \\_____/   \n" +
         "          /       \\  \n" +
@@ -22,7 +22,7 @@ namespace HiryuTK.GameRoomService
         "             / /     \n" +
         "             \\/     \n";
 
-        private const string CatImg2 = "" +
+        const string CatImg2 = "" +
        "          /^--^\\     \n" +
        "          \\_____/   \n" +
        "          /       \\  \n" +
@@ -33,38 +33,58 @@ namespace HiryuTK.GameRoomService
        "            \\ \\     \n" +
        "             \\/     \n";
 
-        private string catImage = CatImg1;
-        private bool isPlayingImageOne;
-        private string givenCatName;
+        //Status
+        bool initialized;
+        string catImage = CatImg1;
+        bool isPlayingImageOne;
+        string givenCatName;
+        string logText;
+        int positionPhase = PositionPhaseMax;
 
         //Timers
-        private int hungerTimer = 24;
-        private int thirstTimer = 16;
-        private int moodTimer = 12;
-        private int cleanlinessTimer = 48;
+        int hungerTimer = 24;
+        int thirstTimer = 16;
+        int moodTimer = 12;
+        int cleanlinessTimer = 48;
 
-        //Cat location
-        private int positionPhase = PositionPhaseMax;
+        //Cache
+        GUIStyle centeredLabel;
 
-        //Log
-        private string logText;
 
         #region Start and end
+        /// <summary>
+        /// Initializes variables used in this window
+        /// </summary>
         public void Initialize()
         {
+            initialized = true;
             givenCatName = GameData.CatName;
             logText = "";
+
+            centeredLabel = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter
+            };
         }
 
-        private void OnDestroy()
+        /// <summary>
+        /// When the window closes
+        /// </summary>
+        void OnDestroy()
         {
             GameData.CatName = givenCatName;
             GameData.SaveData();
         }
         #endregion
 
-        private void OnGUI()
+        /// <summary>
+        /// Draws the cat portrait and stats and other cat info
+        /// </summary>
+        void OnGUI()
         {
+            if (!initialized)
+                Initialize();
+
             //Cat info
             EditorGUILayout.Space(20);
             GUILayout.BeginHorizontal();
@@ -102,15 +122,17 @@ namespace HiryuTK.GameRoomService
 
             if (logText != null)
             {
-                EditorGUILayout.Space(20);
-                var style = new GUIStyle(GUI.skin.label)
-                { alignment = TextAnchor.MiddleCenter };
-                EditorGUILayout.LabelField(logText, style);
+                EditorGUILayout.Space(5);
+                EditorGUILayout.LabelField(logText, centeredLabel);
             }
+
+            Repaint();
         }
-              
 
         #region Play with cat
+        /// <summary>
+        /// Show the cat moving button that the player can click on to play with it
+        /// </summary>
         void ShowCatButtons()
         {
             GUILayout.BeginHorizontal();
@@ -135,6 +157,9 @@ namespace HiryuTK.GameRoomService
             GUILayout.EndHorizontal();
         }
 
+        /// <summary>
+        /// Played with cat event - increase cat mood
+        /// </summary>
         void PlayedWithCat()
         {
             if (GameData.CatMood < 100)
@@ -147,10 +172,13 @@ namespace HiryuTK.GameRoomService
             }
             else
             {
-                logText = "You've played with the cat, cat is super happy!";
+                logText = "The cat is satisfied!";
             }
         }
 
+        /// <summary>
+        /// Update the cat positon
+        /// </summary>
         int positionTimer;
         void TickPositionPhase()
         {
@@ -171,11 +199,13 @@ namespace HiryuTK.GameRoomService
             {
                 positionPhase--;
             }
-            Repaint();
         }
         #endregion
 
         #region Scrub cat
+        /// <summary>
+        /// Scrub the cat by moving the slider let and right
+        /// </summary>
         bool scrubbedLeft = true;
         float scrub;
         void CatScrub()
@@ -187,10 +217,12 @@ namespace HiryuTK.GameRoomService
             {
                 scrubbedLeft = !scrubbedLeft;
                 IncrementCleanliness();
-                Repaint();
             }
         }
 
+        /// <summary>
+        /// Increase the cleanliness stat
+        /// </summary>
         void IncrementCleanliness()
         {
             if (GameData.CatCleanliness < 100)
@@ -204,15 +236,15 @@ namespace HiryuTK.GameRoomService
             }
             else
             {
-                if (Random.Range(0, 1) == 0)
-                    logText = "The cat is thankful.";
-                else
-                    logText = "Cat has been clean!";
+                logText = "Cat no longer smells!";
             }
         }
         #endregion
 
         #region Purchase item effects
+        /// <summary>
+        /// Purchase water for the cat's thirst
+        /// </summary>
         void BuyWater()
         {
             if (GameData.CatThirst == 100)
@@ -232,11 +264,13 @@ namespace HiryuTK.GameRoomService
 
                 if (GameData.CatThirst > 100)
                     GameData.CatThirst = 100;
-                Repaint();
                 FrontDesk.RepaintWindow();
             }
         }
 
+        /// <summary>
+        /// Purchase food for the cat';s hunger
+        /// </summary>
         void BuyFood()
         {
             if (GameData.CatHunger == 100)
@@ -256,12 +290,14 @@ namespace HiryuTK.GameRoomService
 
                 if (GameData.CatHunger > 100)
                     GameData.CatHunger = 100;
-                Repaint();
                 FrontDesk.RepaintWindow();
             }
         }
         #endregion
 
+        /// <summary>
+        /// Inspector update
+        /// </summary>
         void OnInspectorUpdate()
         {
             ImageFlippingTimerUpdate();
@@ -270,6 +306,9 @@ namespace HiryuTK.GameRoomService
         }
 
         #region Portrait
+        /// <summary>
+        /// Automatically flip the cat's on screen image.
+        /// </summary>
         int portraitTimer;
         void ImageFlippingTimerUpdate()
         {
@@ -280,13 +319,15 @@ namespace HiryuTK.GameRoomService
             else
             {
                 catImage = (isPlayingImageOne = !isPlayingImageOne) ? CatImg1 : CatImg2;
-                Repaint();
                 portraitTimer = 4;
             }
         }
         #endregion
 
         #region Cat stat ticks
+        /// <summary>
+        /// Tick the timer that automatically decreases the stats
+        /// </summary>
         void TickStats()
         {
             TickStatTimer(ref GameData.CatHunger, ref hungerTimer, 25);
@@ -295,6 +336,9 @@ namespace HiryuTK.GameRoomService
             TickStatTimer(ref GameData.CatCleanliness, ref cleanlinessTimer, 15);
         }
 
+        /// <summary>
+        /// Decrement a particular timer
+        /// </summary>
         void TickStatTimer(ref int value, ref int timer, int interval)
         {
             if (timer < 0)
@@ -308,10 +352,12 @@ namespace HiryuTK.GameRoomService
                 timer--;
             }
         }
-
         #endregion
 
         #region Achievement
+        /// <summary>
+        /// Check if player has unlocked an achievement
+        /// </summary>
         void CheckAchievement()
         {
             if (GameData.CatHunger >= 100 && GameData.CatThirst >= 100 &&
@@ -325,47 +371,3 @@ namespace HiryuTK.GameRoomService
         #endregion
     }
 }
-
-
-/*
-   // A stat with a tick timer used to make alterations
-    public class TimeredStat
-    {
-        private readonly int depletionInterval;
-        private readonly int statMin;
-        private readonly int statMax;
-        private int timer;
-        private int value;
-
-        public TimeredStat(int startingValue, int statMin, int statMax, int depletionInterval)
-        {
-            this.depletionInterval = depletionInterval;
-            this.statMin = statMin;
-            this.statMax = statMax;
-
-            timer = 0;
-            value = startingValue;
-        }
-
-        public int Value => value;
-
-        public void Tick()
-        {
-            timer--;
-            if (timer < 0)
-            {
-                timer = depletionInterval;
-                if (value > statMin)
-                    value--;
-            }
-        }
-
-        public void Replenish (int amount)
-        {
-            value += amount;
-            if (value > statMax)
-                value = statMax;
-        }
-    }
-
- */

@@ -8,10 +8,10 @@ namespace Sorting.Visualization
     [RequireComponent(typeof(LayoutElement), typeof(Image))]
     public class Node : MonoBehaviour , IComparable<Node>
     {
-        private LayoutElement layout;
-        private Image image;
+        LayoutElement layout;
+        Image image;
 
-        private Color startColor;
+        Color startColor;
         
         public int Value { get; private set; }
 
@@ -73,11 +73,11 @@ namespace Sorting.Visualization
         /// <summary>
         /// Set node height
         /// </summary>
-        private void SetHeight (float height) => layout.preferredHeight = height;
+        void SetHeight (float height) => layout.preferredHeight = height;
 
         /// <summary>
         /// Set node color
         /// </summary>
-        private void SetColor (Color color) => image.color = color;
+        void SetColor (Color color) => image.color = color;
     }
 }

@@ -10,10 +10,10 @@ namespace HiryuTK.AsteroidsTopDownController
     public class Pool
     {
         //Fields
-        private List<PoolObject> active = new List<PoolObject>();
-        private List<PoolObject> inactive = new List<PoolObject>();
-        private PoolObject prefab;
-        private Transform parent;
+        List<PoolObject> active = new List<PoolObject>();
+        List<PoolObject> inactive = new List<PoolObject>();
+        PoolObject prefab;
+        Transform parent;
 
         //Contructor
         public Pool(PoolObject prefab, Transform parent)

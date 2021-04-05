@@ -9,13 +9,17 @@ namespace HiryuTK.GameRoomService
     {
         public static GamePhase phase = GamePhase.Menu;
 
-        private const int ButtonSize = 70;
+        const int ButtonSize = 70;
 
         //Layout positions
-        private bool statsFoldout = true;
+        bool statsFoldout = true;
 
         [MenuItem("Hotel/Front Desk")]
-        private static void Init()
+
+        /// <summary>
+        /// EditorWindow method that runs automatically when the window is clicked open
+        /// </summary>
+        static void Init()
         {
             //Load data
             GameData.LoadData();
@@ -25,7 +29,7 @@ namespace HiryuTK.GameRoomService
             window.Show();
         }
 
-        private void OnGUI()
+        void OnGUI()
         {
             DisplayWelcomeMessage();
             DisplayGameStats();
@@ -69,6 +73,7 @@ namespace HiryuTK.GameRoomService
             if (statsFoldout)
             {
                 Label("Money ------------------", GameData.Money.ToString());
+                EditorGUILayout.Space(5);
                 if (GameData.Achivement_CatLover)
                     Label("Cat Lover ------------------", "Unlocked!");
                 else
@@ -118,7 +123,7 @@ namespace HiryuTK.GameRoomService
         #region Minor methods
         void Label(string s1, string s2 = null)
         {
-            EditorGUILayout.LabelField(s1, s2 == null ? "" : s2, GUILayout.ExpandWidth(false));
+            EditorGUILayout.LabelField(s1, s2 == null ? "" : s2);
         }
 
         public static void RepaintWindow()
@@ -128,7 +133,7 @@ namespace HiryuTK.GameRoomService
             //window.Repaint();
         }
 
-        private void OnDestroy()
+        void OnDestroy()
         {
             GameData.SaveData();
         }

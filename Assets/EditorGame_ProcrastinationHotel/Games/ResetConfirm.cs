@@ -6,9 +6,12 @@ namespace HiryuTK.GameRoomService
 {
     public class ResetConfirm : EditorWindow
     {
-        private static void Init() {}
+        static void Init() {}
 
-        private void OnGUI()
+        /// <summary>
+        /// Draws the reset confirm window with a Yes and a No button.
+        /// </summary>
+        void OnGUI()
         {
             EditorGUILayout.LabelField("Are you sure you want to reset all data?");
             GUILayout.BeginHorizontal();

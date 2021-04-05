@@ -17,19 +17,19 @@ namespace Sorting.Visualization
 
         [Header("Visualizing sequence parameters")]
         [SerializeField, Range(2, 100)]
-        private int nodeCount = 10;
+        int nodeCount = 10;
 
         //Reference
-        private NodeFactory factory;
+        NodeFactory factory;
 
         //Cache
-        private Node[] perfectSequence;
+        Node[] perfectSequence;
 
         //Properties
         public Node[] Nodes { get; private set; } //Current sequence of nodes
 
         #region MonoBehaviour
-        private void Awake()
+        void Awake()
         {
             //Reference
             factory = GetComponent<NodeFactory>();
@@ -83,7 +83,7 @@ namespace Sorting.Visualization
         /// Coroutine that randomly arrange the nodes
         /// </summary>
         /// <returns></returns>
-        private IEnumerator Shuffle()
+        IEnumerator Shuffle()
         {
             //We shuffle by selecting a random node and then move it to the front.
             //Keep a list of indexes that have yet to be moved to the front.

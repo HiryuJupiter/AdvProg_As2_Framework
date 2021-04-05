@@ -9,17 +9,17 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
     public class Spawner : MonoBehaviour
     {
         //Fields
-        [SerializeField] private float spawnIntervalMin = 2f;
-        [SerializeField] private float spawnIntervalMax = 10f;
+        [SerializeField] float spawnIntervalMin = 2f;
+        [SerializeField] float spawnIntervalMax = 10f;
 
-        private Settings settings;
-        private ObjectPoolManager poolM;
+        Settings settings;
+        ObjectPoolManager poolM;
 
-        private float timer = 0f;
-        private float speedUpMod = 1f;
-        private float speedUpSpeed = 0.01f;
+        float timer = 0f;
+        float speedUpMod = 1f;
+        float speedUpSpeed = 0.01f;
 
-        private void Start()
+        void Start()
         {
             //Reference then start spawning
             settings    = Settings.Instance;
@@ -27,7 +27,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
             Spawn();
         }
 
-        private void Spawn()
+        void Spawn()
         {
             StartCoroutine(DoSpawn());
         }
@@ -36,7 +36,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
         /// Coroutine that goes on forever to spawn the environmental objects
         /// </summary>
         /// <returns></returns>
-        private IEnumerator DoSpawn()
+        IEnumerator DoSpawn()
         {
             //Infinite loop
             while (true)
@@ -76,7 +76,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
         /// <summary>
         /// Method for spawning an asteroid
         /// </summary>
-        private void SpawnAsteroid()
+        void SpawnAsteroid()
         {
             Vector3 p = settings.RandomSpawnPoint();
             Quaternion r = settings.RandomSpawnRotation(p);
@@ -87,7 +87,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
         /// <summary>
         /// Method for spawning an enemy ship
         /// </summary>
-        private void SpawnEnemyShip ()
+        void SpawnEnemyShip ()
         {
             Vector3 p = settings.RandomSpawnPoint();
             Quaternion r = settings.RandomSpawnRotation(p);

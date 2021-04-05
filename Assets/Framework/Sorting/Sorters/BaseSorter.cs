@@ -10,7 +10,7 @@ namespace Sorting.Sorter
         protected Node[] nodes;
 
         #region MonoBehaviour 
-        private void Start()
+        void Start()
         {
             visualizer = Visualizer.Instance;
             nodes = visualizer.Nodes;

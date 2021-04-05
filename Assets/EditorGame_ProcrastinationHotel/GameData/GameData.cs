@@ -7,21 +7,21 @@ namespace HiryuTK.GameRoomService
     {
         //Has save file
         public static bool HasSaveFile;
-        private static string keyHasSave = "HasSave";
+        static string keyHasSave = "HasSave";
 
         //Front desk
         public static int Money;
         public static bool Achivement_CatLover;
         public static bool Achivement_DanceFreak;
         public static bool Achivement_CombatLegend;
-        private static string keyMoney = "Money";
-        private static string keyCatLover = "CatLover";
-        private static string keyDanceFreak = "DanceFreak";
-        private static string keyCombatLegend = "CombatLegend";
+        static string keyMoney = "Money";
+        static string keyCatLover = "CatLover";
+        static string keyDanceFreak = "DanceFreak";
+        static string keyCombatLegend = "CombatLegend";
 
         //Combat 
         public static int Health = 100;
-        private static string keyHealth = "Health";
+        static string keyHealth = "Health";
 
         //Cat
         public static string CatName;
@@ -29,16 +29,19 @@ namespace HiryuTK.GameRoomService
         public static int CatThirst = 0;
         public static int CatMood = 0;
         public static int CatCleanliness = 0;
-        private static string keyCatName = "CatName";
-        private static string keyHunger = "Hunger";
-        private static string keyThirst = "Thirst";
-        private static string keyMood = "Irritation";
-        private static string keyCleanliness = "Cleanliness";
+        static string keyCatName = "CatName";
+        static string keyHunger = "Hunger";
+        static string keyThirst = "Thirst";
+        static string keyMood = "Irritation";
+        static string keyCleanliness = "Cleanliness";
 
         //DDR
         public static int DDRHighScore = 0;
-        private static string keyDDRHighScore = "DDRHighScore";
+        static string keyDDRHighScore = "DDRHighScore";
 
+        /// <summary>
+        /// Save all data in player prefs
+        /// </summary>
         public static void SaveData()
         {
             //Front desk
@@ -62,11 +65,14 @@ namespace HiryuTK.GameRoomService
             PlayerPrefs.SetInt(keyDDRHighScore, DDRHighScore);
         }
 
+        /// <summary>
+        /// Load all data from player prefs
+        /// </summary>
         public static void LoadData()
         {
             //Front desk
             HasSaveFile = PlayerPrefs.GetInt(keyHasSave, 0) == 0 ? false : true;
-            Money = PlayerPrefs.GetInt(keyMoney, 0);
+            Money = PlayerPrefs.GetInt(keyMoney, 20);
             Achivement_CatLover = PlayerPrefs.GetInt(keyCatLover, 0) == 0 ? false : true;
             Achivement_DanceFreak = PlayerPrefs.GetInt(keyDanceFreak, 0) == 0 ? false : true;
             Achivement_CombatLegend = PlayerPrefs.GetInt(keyCombatLegend, 0) == 0 ? false : true;
@@ -83,10 +89,12 @@ namespace HiryuTK.GameRoomService
 
             //DDR
             DDRHighScore = PlayerPrefs.GetInt(keyDDRHighScore, 0);
-             
-            Debug.Log("Loaded data. Achivement_CatLover: "  + Achivement_CatLover);
+
         }
 
+        /// <summary>
+        /// Reset all data to their default value
+        /// </summary>
         public static void ResetData()
         {
             HasSaveFile = false;

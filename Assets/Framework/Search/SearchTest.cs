@@ -8,8 +8,7 @@ namespace Search
         [SerializeField] int[] array = new int[] { 0, 1, 2, 3, 4, 5, 6 };
         [SerializeField] int searchTarget = 2;
 
-
-        private void Start()
+        void Start()
         {
             PerformSearch();
         }

@@ -13,7 +13,7 @@ namespace HiryuTK.AsteroidsTopDownController
     public abstract class PoolObject : MonoBehaviour
     {
         protected Pool pool;
-        private bool isActive;
+        bool isActive;
 
         /// <summary>
         /// Called when the object is first created in the pool

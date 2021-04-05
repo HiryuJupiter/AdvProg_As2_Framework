@@ -6,13 +6,13 @@ namespace Sorting.Visualization
 {
     public class NodeFactory : MonoBehaviour
     {
-        [SerializeField] private RectTransform canvasRectTransform;
-        [SerializeField] private Node   prefab;
-        [SerializeField] private Color  startColor   = Color.red;
-        [SerializeField] private Color  endColor     = Color.green;
+        [SerializeField] RectTransform canvasRectTransform;
+        [SerializeField] Node   prefab;
+        [SerializeField] Color  startColor   = Color.red;
+        [SerializeField] Color  endColor     = Color.green;
 
-        private int     nodeCount;
-        private float   scaleStep;
+        int     nodeCount;
+        float   scaleStep;
 
         /// <summary>
         /// Create a sorted sequence 
@@ -35,7 +35,7 @@ namespace Sorting.Visualization
         /// <summary>
         /// Create a node
         /// </summary>
-        private Node CreateNode(int index)
+        Node CreateNode(int index)
         {
             Node node = Instantiate(prefab, transform);
             node.gameObject.name = $"Node [{index}]";

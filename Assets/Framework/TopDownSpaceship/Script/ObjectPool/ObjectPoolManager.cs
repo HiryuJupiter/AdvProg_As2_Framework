@@ -13,12 +13,12 @@ namespace HiryuTK.AsteroidsTopDownController
         public static ObjectPoolManager Instance;
 
         [Header("Pf")]
-        [SerializeField] private PoolObject pf_playerBullet;
-        [SerializeField] private PoolObject pf_enemyShip;
-        [SerializeField] private PoolObject pf_Asteroid;
-        private Pool playerBullet;
-        private Pool enemyShip;
-        private Pool asteroids;
+        [SerializeField] PoolObject pf_playerBullet;
+        [SerializeField] PoolObject pf_enemyShip;
+        [SerializeField] PoolObject pf_Asteroid;
+        Pool playerBullet;
+        Pool enemyShip;
+        Pool asteroids;
 
 
         void Awake()

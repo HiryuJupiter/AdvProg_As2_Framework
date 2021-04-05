@@ -23,7 +23,7 @@ namespace HiryuTK.AsteroidsTopDownController
             MoneyAmount.text = money.ToString("00");
         }
 
-        private void Awake()
+        void Awake()
         {
             Instance = this;
         }

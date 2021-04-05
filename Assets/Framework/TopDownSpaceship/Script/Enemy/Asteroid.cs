@@ -10,15 +10,15 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
     public class Asteroid : PoolObject, IDamagable, IMineable
     {
         //Field
-        private const float ScaleMax = 1f;
-        private const float ScaleMin = .4f;
+        const float ScaleMax = 1f;
+        const float ScaleMin = .4f;
 
-        private  bool alive;
-        private  float moveSpeed;
-        private  float rotationSpeed;
-        private  Vector3 rawForward;
-        private  Vector3 initalScale;
-        private  Settings settings;
+        bool alive;
+        float moveSpeed;
+        float rotationSpeed;
+        Vector3 rawForward;
+        Vector3 initalScale;
+        Settings settings;
 
         #region Interface
         /// <summary>
@@ -104,7 +104,7 @@ namespace HiryuTK.AsteroidsTopDownController.Enemy
         /// Check if object has gone outside of screen bounds
         /// </summary>
         /// <returns></returns>
-        private IEnumerator DetectOutOfBounds()
+        IEnumerator DetectOutOfBounds()
         {
             //Let the aseteroid live for a while before checking, as they can be moving very slowly
             alive = true;
