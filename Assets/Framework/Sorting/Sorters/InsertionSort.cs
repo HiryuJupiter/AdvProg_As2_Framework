@@ -7,6 +7,9 @@ using System.Collections;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Holds the logic for the sorting algorithm insertion sort
+    /// </summary>
     public class InsertionSort : BaseSorter
     {
         /// <summary>

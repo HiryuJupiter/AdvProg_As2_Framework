@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Sorting.Visualization
 {
+    /// <summary>
+    /// For building visualization nodes
+    /// </summary>
     public class NodeFactory : MonoBehaviour
     {
         [SerializeField] RectTransform canvasRectTransform;

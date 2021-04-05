@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Search
 {
+    /// <summary>
+    /// A testing class to see if linear search works
+    /// </summary>
     public class SearchTest : MonoBehaviour
     {
         [SerializeField] int[] array = new int[] { 0, 1, 2, 3, 4, 5, 6 };

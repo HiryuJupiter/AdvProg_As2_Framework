@@ -4,6 +4,9 @@ using UnityEditor;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Controls the dance game logic
+    /// </summary>
     public class DDR : EditorWindow
     {
         const int Columns = 4;

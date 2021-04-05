@@ -4,6 +4,9 @@ using UnityEditor;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Mini pet game
+    /// </summary>
     public class CatFeeder : EditorWindow
     {
         const int PositionPhaseMax = 5;

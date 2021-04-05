@@ -13,6 +13,9 @@ namespace HiryuTK.AsteroidsTopDownController
         Rigidbody2D rb;
 
         #region Object pool
+        /// <summary>
+        /// For setting the initial settings when it is spawn
+        /// </summary>
         public override void InitialSpawn(Pool pool)
         {
             //Set the object's pool reference, then reference classes and components
@@ -21,6 +24,9 @@ namespace HiryuTK.AsteroidsTopDownController
             rb = GetComponent<Rigidbody2D>();
         }
 
+        /// <summary>
+        /// For when the object is activated
+        /// </summary>
         public override void Activation(Vector2 p, Quaternion r)
         {
             //When this object is spawned, give it the proper velocity towards its up direction

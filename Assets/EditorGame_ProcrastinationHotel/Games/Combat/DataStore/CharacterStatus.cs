@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Holds the player data
+    /// </summary>
     public class CharacterStatus
     {
         const int MaxHP = 100;

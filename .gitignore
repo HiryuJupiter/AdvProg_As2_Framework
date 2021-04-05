@@ -3,6 +3,8 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Dd]oxygen/html/
+/[Dd]oxygen/html/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory

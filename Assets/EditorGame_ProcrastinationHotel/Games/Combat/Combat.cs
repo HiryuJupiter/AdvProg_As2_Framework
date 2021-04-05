@@ -3,15 +3,11 @@ using System.Text;
 using UnityEngine;
 using UnityEditor;
 
-/*
-1. a character's own charStatus is filtered by their own current statusEffectFilter
-2. If the character can perform attack, then 
-   filter their attack ability with their current statusEffectFilter
-3. filter their attack ability with the target's statusEffect filter
-4. if target can receive attack, then apply the ability on the target
- */
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Controls everything that goes on in the combat window
+    /// </summary>
     public class Combat : EditorWindow
     {
         //Rendering pos - Stats

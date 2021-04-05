@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Search
 {
+    /// <summary>
+    /// Holds the logic for performing a linear search
+    /// </summary>
     public static class LinearSearch
     { 
         /// <summary>

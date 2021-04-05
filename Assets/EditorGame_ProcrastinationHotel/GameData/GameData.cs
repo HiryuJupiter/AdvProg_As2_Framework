@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Manages the game data 
+    /// </summary>
     public static class GameData
     {
         //Has save file

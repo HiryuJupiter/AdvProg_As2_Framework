@@ -4,9 +4,11 @@ using UnityEngine;
 
 namespace HiryuTK.AsteroidsTopDownController
 {
+    /// <summary>
+    /// For controlling the mining bem
+    /// </summary>
     public class PlayerMiningBeam : MonoBehaviour
     {
-        //Fields
         float miningCooldownTimer;
         PlayerTopDown3DController player;
         Settings settings;
@@ -14,7 +16,9 @@ namespace HiryuTK.AsteroidsTopDownController
 
         bool MiningCooldownReady => miningCooldownTimer <= 0f;
 
-        //This has to be set up before it can be used
+        /// <summary>
+        /// This has to be set up before it can be used
+        /// </summary>
         public void Setup(PlayerTopDown3DController player)
         {
             this.player = player;
@@ -22,7 +26,9 @@ namespace HiryuTK.AsteroidsTopDownController
             isSetup = true;
         }
 
-        //Similar to update but has to be called from the outside
+        /// <summary>
+        /// Similar to update but has to be called from the outside
+        /// </summary>
         public void TickUpdate()
         {
             //Guard statement
@@ -95,13 +101,18 @@ namespace HiryuTK.AsteroidsTopDownController
             }
         }
 
-        //Turn off mining beam
+        /// <summary>
+        /// Turn off mining beam
+        /// </summary>
         void TurnOffMiningBeam()
         {
             player.LineRenderer.enabled = false;
         }
 
-        //Mine the asteroid passed in
+        /// <summary>
+        /// Mine the asteroid passed in
+        /// </summary>
+        /// <param name="asteroid"></param>
         void MineAsteroid(IMineable asteroid)
         {
             asteroid.Mine(settings.MiningPower);

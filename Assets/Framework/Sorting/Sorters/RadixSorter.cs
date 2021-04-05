@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Holds the logic for the sorting algorithm radix sort
+    /// </summary>
     public class RadixSorter : BaseSorter
     {
         // [272, 45, 75, 81, 501, 2, 24, 66]

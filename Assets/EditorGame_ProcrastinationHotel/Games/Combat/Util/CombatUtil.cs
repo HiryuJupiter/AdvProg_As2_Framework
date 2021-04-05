@@ -4,6 +4,9 @@ using UnityEditor;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Holds various utility methods to make the other classes shorter
+    /// </summary>
     public static class CombatUtil
     {
         /// <summary>

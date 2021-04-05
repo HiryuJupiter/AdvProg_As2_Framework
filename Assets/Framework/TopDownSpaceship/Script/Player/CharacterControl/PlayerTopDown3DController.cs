@@ -110,6 +110,9 @@ namespace HiryuTK.AsteroidsTopDownController
         #endregion
 
         #region Movement
+        /// <summary>
+        /// Updates the movement of the ship
+        /// </summary>
         void UpdateMovement()
         {
             //The ship can only move forward
@@ -120,6 +123,9 @@ namespace HiryuTK.AsteroidsTopDownController
                 Time.deltaTime * settings.MoveAcceleration);
         }
 
+        /// <summary>
+        /// Updates the rotation of the ship
+        /// </summary>
         void UpdateRotation()
         {
             //Rotational changes should be applied slowly
@@ -127,6 +133,9 @@ namespace HiryuTK.AsteroidsTopDownController
             rb.rotation -= rotDelta * settings.RotationSpeed * Time.deltaTime;
         }
 
+        /// <summary>
+        /// Applie velocity
+        /// </summary>
         void ApplyRigidbodyVelocity()
         {
             //Movement is relative to ship's facing

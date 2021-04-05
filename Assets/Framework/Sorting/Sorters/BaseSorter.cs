@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Sorting algorithm base class
+    /// </summary>
     public abstract class BaseSorter : MonoBehaviour
     {
         protected Visualizer visualizer;

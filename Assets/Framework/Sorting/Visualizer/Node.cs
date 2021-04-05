@@ -5,6 +5,9 @@ using UnityEngine.UI;
 //A node inbar
 namespace Sorting.Visualization
 {
+    /// <summary>
+    /// Controls a visualization node
+    /// </summary>
     [RequireComponent(typeof(LayoutElement), typeof(Image))]
     public class Node : MonoBehaviour , IComparable<Node>
     {

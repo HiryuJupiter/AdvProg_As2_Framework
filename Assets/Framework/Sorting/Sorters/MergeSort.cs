@@ -3,6 +3,9 @@ using System.Collections;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Holds the logic for the sorting algorithm merge sort
+    /// </summary>
     public class MergeSort : BaseSorter
     {
         /// <summary>

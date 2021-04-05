@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Holds the logic for the sorting algorithm selection sort
+    /// </summary>
     public class SelectionSorter : BaseSorter
     {
         //Logic: run through the entire sequence, find the smallest number and bring it to the front.

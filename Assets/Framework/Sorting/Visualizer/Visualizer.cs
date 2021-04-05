@@ -9,6 +9,9 @@ Node generator gives the command to factory on when to start building and how ma
 
 namespace Sorting.Visualization
 {
+    /// <summary>
+    /// For visualizing nodes
+    /// </summary>
     [RequireComponent(typeof(NodeFactory))]
     public class Visualizer : MonoBehaviour
     {

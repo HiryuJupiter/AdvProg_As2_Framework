@@ -4,6 +4,9 @@ using UnityEditor;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// For opening and drawing the reset confirm window
+    /// </summary>
     public class ResetConfirm : EditorWindow
     {
         static void Init() {}
@@ -30,6 +33,9 @@ namespace HiryuTK.GameRoomService
             GUILayout.EndHorizontal();
         }
 
+        /// <summary>
+        /// Closes the reset confirm window
+        /// </summary>
         void CloseWindow()
         {
             GetWindow(typeof(ResetConfirm), false, "Reset confirm").Close();

@@ -4,6 +4,9 @@ using System.Collections;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Holds the logic for the sorting algorithm binary insertion
+    /// </summary>
     public class BinaryInsertionSort : BaseSorter
     {
         /// <summary>

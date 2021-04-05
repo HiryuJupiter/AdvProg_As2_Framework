@@ -4,6 +4,9 @@ using UnityEditor;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// For displaying things in the front desk window
+    /// </summary>
     public enum GamePhase { Menu, Gameplay, GameOver }
     public class FrontDesk : EditorWindow
     {
@@ -29,6 +32,9 @@ namespace HiryuTK.GameRoomService
             window.Show();
         }
 
+        /// <summary>
+        /// Displays GUI elements: welcome message, game stats, and menu buttons
+        /// </summary>
         void OnGUI()
         {
             DisplayWelcomeMessage();
@@ -59,6 +65,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Displays a simple welcome message
+        /// </summary>
         void DisplayWelcomeMessage()
         {
             var style = new GUIStyle(GUI.skin.label)
@@ -91,6 +100,9 @@ namespace HiryuTK.GameRoomService
             }
         }
 
+        /// <summary>
+        /// Display button for opening the cat minigame window
+        /// </summary>
         void DisplayCatFeeder()
         {
             CatFeeder window = (CatFeeder)GetWindow(typeof(CatFeeder), false, "Cat feeder");
@@ -98,6 +110,9 @@ namespace HiryuTK.GameRoomService
             window.Initialize();
         }
 
+        /// <summary>
+        /// Display button for opening the dance minigame window
+        /// </summary>
         void DisplayDDR()
         {
             DDR window = (DDR)GetWindow(typeof(DDR), false, "DDR");
@@ -105,6 +120,9 @@ namespace HiryuTK.GameRoomService
             window.Initialize();
         }
 
+        /// <summary>
+        /// Display button for opening the combat minigame window
+        /// </summary>
         void DisplayCombat()
         {
             Combat window = (Combat)GetWindow(typeof(Combat), false, "Combat");
@@ -112,6 +130,9 @@ namespace HiryuTK.GameRoomService
             window.Initialize();
         }
 
+        /// <summary>
+        /// Display button for opening the minigame window
+        /// </summary>
         void DisplayResetConfirmWindow ()
         {
             ResetConfirm window = (ResetConfirm)GetWindow(typeof(ResetConfirm), false, "Reset confirm");
@@ -121,18 +142,25 @@ namespace HiryuTK.GameRoomService
         }
 
         #region Minor methods
+        /// <summary>
+        /// For drawing a label in the window
+        /// </summary>
         void Label(string s1, string s2 = null)
         {
             EditorGUILayout.LabelField(s1, s2 == null ? "" : s2);
         }
 
+        /// <summary>
+        /// Refresh the drawn elements in the windown
+        /// </summary>
         public static void RepaintWindow()
         {
             GetWindow(typeof(FrontDesk), false, "Procrastination Hotel - Front Desk").Repaint();
-            //FrontDesk window = (FrontDesk)GetWindow(typeof(FrontDesk), false, "Procrastination Hotel - Front Desk");
-            //window.Repaint();
         }
 
+        /// <summary>
+        /// When the window closes
+        /// </summary>
         void OnDestroy()
         {
             GameData.SaveData();

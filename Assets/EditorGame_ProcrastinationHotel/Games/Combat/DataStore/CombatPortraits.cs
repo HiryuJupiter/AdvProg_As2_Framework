@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace HiryuTK.GameRoomService
 {
+    /// <summary>
+    /// Holds the string values of ascii/emoji arts
+    /// </summary>
     public static class CombatPortraits
     {
         //public static string enemyBird = "" +

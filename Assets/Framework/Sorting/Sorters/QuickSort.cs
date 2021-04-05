@@ -5,6 +5,9 @@ using System.Collections;
 
 namespace Sorting.Sorter
 {
+    /// <summary>
+    /// Holds the logic for the sorting algorithm quick sort
+    /// </summary>
     public class QuickSort : BaseSorter
     {
         /// <summary>
