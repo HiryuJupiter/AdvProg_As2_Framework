@@ -5,9 +5,13 @@ using UnityEditor;
 namespace HiryuTK.GameRoomService
 {
     /// <summary>
-    /// For displaying things in the front desk window
+    /// Game phases that are inside the game
     /// </summary>
     public enum GamePhase { Menu, Gameplay, GameOver }
+
+    /// <summary>
+    /// For displaying things in the front desk window
+    /// </summary>
     public class FrontDesk : EditorWindow
     {
         public static GamePhase phase = GamePhase.Menu;
