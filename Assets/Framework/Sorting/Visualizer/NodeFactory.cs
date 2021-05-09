@@ -20,17 +20,17 @@ namespace Sorting.Visualization
         /// <summary>
         /// Create a sorted sequence 
         /// </summary>
-        public Node[] BuildSequence (int length)
+        public List<Node> BuildSequence (int length)
         {
             //Cache calculated values
             this.nodeCount = length;
             scaleStep = canvasRectTransform.rect.height / length;
 
             //Create an array sequence and then create a node for each index
-            Node[] seq = new Node[length];
+            List<Node> seq = new List<Node>();
             for (int i = 0; i < length; i++)
             {
-                seq[i] = CreateNode(i);
+                seq.Add(CreateNode(i));
             }
             return seq;
         }

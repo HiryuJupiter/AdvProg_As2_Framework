@@ -9,14 +9,15 @@ namespace Sorting.Visualization
     /// Controls a visualization node
     /// </summary>
     [RequireComponent(typeof(LayoutElement), typeof(Image))]
-    public class Node : MonoBehaviour , IComparable<Node>
+    public class Node : MonoBehaviour , IComparable
     {
         LayoutElement layout;
         Image image;
-
         Color startColor;
         
         public int Value { get; private set; }
+        float height;
+
 
         /// <summary>
         /// Create a visualizer node
@@ -29,6 +30,7 @@ namespace Sorting.Visualization
             //Cache
             startColor = color;
             Value = value;
+            this.height = height;
 
             //References
             layout = gameObject.GetComponent<LayoutElement>();
@@ -37,22 +39,6 @@ namespace Sorting.Visualization
             //Initialize attributes
             SetHeight(height);
             SetColor(color);
-        }
-
-        /// <summary>
-        /// Implementing the interface function
-        /// </summary>
-        /// <returns> If returns less than zero, then x < y; returns zero, the x = y; if returns more than zero, then x > y </y> </returns>
-        public int CompareTo(Node other)
-        {
-            if (Value.CompareTo(other.Value) != 0)
-            {
-                return Value.CompareTo(other.Value);
-            }
-            else
-            {
-                return 0;
-            }
         }
 
         /// <summary>
@@ -82,5 +68,21 @@ namespace Sorting.Visualization
         /// Set node color
         /// </summary>
         void SetColor (Color color) => image.color = color;
+
+        /// <summary>
+        /// Custom iComparator
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public int CompareTo(object obj)
+        {
+            Node other = (Node)obj;
+            if (Value > other.Value)
+                return 1;
+            if (Value < other.Value)
+                return -1;
+            else
+                return 0;
+        }
     }
 }

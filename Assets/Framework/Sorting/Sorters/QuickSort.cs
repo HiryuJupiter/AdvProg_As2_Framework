@@ -2,21 +2,34 @@
 using Sorting.Visualization;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Sorting.Sorter
 {
     /// <summary>
     /// Holds the logic for the sorting algorithm quick sort
     /// </summary>
-    public class QuickSort : BaseSorter
+    public static class QuickSorter
     {
+        static MonoBehaviour mono;
+        static List<Node> list;
+        static Action visualizationCallback;
+
         /// <summary>
-        /// Override the base sorting method with the current definition of sorting algorithm
+        /// Starts the sort
         /// </summary>
-        protected override IEnumerator SortAscending()
+        /// <typeparam name="T"></typeparam>
+        /// <param name="_mono"></param>
+        /// <param name="_list"></param>
+        /// <param name="_visualizationCallback"></param>
+        /// <returns></returns>
+        public static IEnumerator Run<T>(MonoBehaviour _mono, List<Node> _list, Action _visualizationCallback) where T : IComparable
         {
-            StartCoroutine(DoQuickSort(0, nodes.Length - 1));
-            yield return null;
+            mono = _mono;
+            list = _list;
+            visualizationCallback = _visualizationCallback;
+
+            yield return _mono.StartCoroutine(DoQuickSort(0, list.Count - 1));
         }
 
         /// <summary>
@@ -25,28 +38,27 @@ namespace Sorting.Sorter
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        IEnumerator DoQuickSort(int left, int right)
+        static IEnumerator DoQuickSort(int left, int right)
         {
             if (left >= right) //This occurs upon reaching the end of recurrsion.
                 yield break;
 
             int pivotIndex = 0;
-            yield return StartCoroutine(Partition(left, right, (finalPivotIndex) => pivotIndex = finalPivotIndex));
-            yield return StartCoroutine(DoQuickSort(left, pivotIndex - 1)); //Sort left side
-            yield return StartCoroutine(DoQuickSort(pivotIndex + 1, right)); //Sort right side
+            yield return mono.StartCoroutine(Partition(left, right, (finalPivotIndex) => pivotIndex = finalPivotIndex));
+            yield return mono.StartCoroutine(DoQuickSort(left, pivotIndex - 1)); //Sort left side
+            yield return mono.StartCoroutine(DoQuickSort(pivotIndex + 1, right)); //Sort right side
         }
 
         /// <summary>
         /// Sort the partitioned group
         /// </summary>
         /// <returns></returns>
-        IEnumerator Partition(int low, int high, Action<int> finalPivotIndex)
+        static IEnumerator Partition(int low, int high, Action<int> finalPivotIndex)
         {
             //Takes the last element as pivot
             int pivotIndex = high;
-            int pivotValue = nodes[pivotIndex].Value;
-            HighlightNodeRed(pivotIndex, true);
-            UpdateNodes();
+            int pivotValue = list[pivotIndex].Value;
+            visualizationCallback?.Invoke();
 
             //Loop through the array from left bound to right bound.
             // J is the current element we're looking at, it's incremented automatically by the for loop.
@@ -54,46 +66,42 @@ namespace Sorting.Sorter
             int i = low - 1;
             for (int j = low; j < high; j++)
             {
-                if (nodes[j].Value < pivotValue)
+                if (list[j].Value < pivotValue)
                 {
                     i++;
-                    SwapNodes(i, j);
+                    SwapNodes(list, i, j);
 
                     //If the current value is small than pivotValue, then move it to the left side, and increment the lower-section's marker
-                    HighlightNodeBlue(i, true);
-                    HighlightNodeBlue(j, true);
-
-                    
-                    UpdateNodes();
+                    visualizationCallback?.Invoke();
                     yield return null;
-
-                    HighlightNodeBlue(i, false);
-                    HighlightNodeBlue(j, false);
                 }
             }
 
             //Since in the first step, the pivot selected was the last number, in order for it to now
             //seperate the low and high group, it need to swap with the number on the right side of i,
             //namely, swap with the first number of the high group.
-            SwapNodes(i + 1, high);
+            SwapNodes(list, i + 1, high);
 
-            HighlightNodeBlue(i + 1, true);
-            HighlightNodeBlue(high, true);
-            
-            UpdateNodes();
             yield return null;
-
-            HighlightNodeBlue(i + 1, false);
-            HighlightNodeBlue(high, false);
-
-            HighlightNodeRed(i + 1, false);
-            UpdateNodes();
 
             //Returns the pivot index.
             finalPivotIndex(i + 1);
         }
+
+        /// <summary>
+        /// Swap nodes at 2 indexes
+        /// </summary>
+        /// <param name="indexA"></param>
+        /// <param name="indexB"></param>
+        static void SwapNodes<T>(List<T> list, int indexA, int indexB) where T : IComparable
+        {
+            T temp = list[indexA];
+            list[indexA] = list[indexB];
+            list[indexB] = temp;
+        }
     }
 }
+
 
 //Perfect quick sort without coroutine for visualization
 /*

@@ -314,7 +314,7 @@ RectTransform:
   m_Children:
   - {fileID: 65178511}
   m_Father: {fileID: 1225933896}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -333,6 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b743c9396281bb44935fbdded1e2881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visualizer: {fileID: 0}
+  nodes: []
 --- !u!114 &120093850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016d9806d532b8d4a8c874a2e56d46ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visualizer: {fileID: 0}
+  nodes: []
 --- !u!114 &700383364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,7 +1041,7 @@ RectTransform:
   m_Children:
   - {fileID: 1362332421}
   m_Father: {fileID: 1225933896}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1056,6 +1060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47da197994d69c49a9d0bc3b8f4dab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visualizer: {fileID: 0}
+  nodes: []
 --- !u!114 &783277182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1189,7 @@ RectTransform:
   m_Children:
   - {fileID: 458090928}
   m_Father: {fileID: 1225933896}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1296,6 +1302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4e5c65b9d6dbc47afa756f8b68b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visualizer: {fileID: 0}
+  nodes: []
 --- !u!1 &961279363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1316,6 @@ GameObject:
   - component: {fileID: 961279368}
   - component: {fileID: 961279367}
   - component: {fileID: 961279366}
-  - component: {fileID: 961279365}
   m_Layer: 5
   m_Name: Button - Selection Sort
   m_TagString: Untagged
@@ -1336,18 +1343,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &961279365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961279363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e8ae94b07eadd48820b04ea562cc2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &961279366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,9 +1387,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 961279365}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: RunSorter
+      - m_Target: {fileID: 1586799606}
+        m_TargetAssemblyTypeName: Sorting.SortingManager, Assembly-CSharp
+        m_MethodName: RunSelectionSort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1616,7 +1611,6 @@ GameObject:
   - component: {fileID: 1112636089}
   - component: {fileID: 1112636088}
   - component: {fileID: 1112636087}
-  - component: {fileID: 1112636090}
   m_Layer: 5
   m_Name: Button - Bubblesort
   m_TagString: Untagged
@@ -1688,9 +1682,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1112636090}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: RunSorter
+      - m_Target: {fileID: 1586799606}
+        m_TargetAssemblyTypeName: Sorting.SortingManager, Assembly-CSharp
+        m_MethodName: RunBubbleSort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1738,18 +1732,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112636085}
   m_CullTransparentMesh: 1
---- !u!114 &1112636090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112636085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2a937108ccc5d94b9ca14d864576e63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1225933895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,10 +1763,10 @@ RectTransform:
   - {fileID: 1942582696}
   - {fileID: 1112636086}
   - {fileID: 961279364}
+  - {fileID: 1765281138}
   - {fileID: 944299395}
   - {fileID: 783277180}
   - {fileID: 120093848}
-  - {fileID: 1765281138}
   - {fileID: 700383362}
   m_Father: {fileID: 374566336}
   m_RootOrder: 1
@@ -1972,6 +1954,7 @@ GameObject:
   - component: {fileID: 1586799605}
   - component: {fileID: 1586799604}
   - component: {fileID: 1586799603}
+  - component: {fileID: 1586799606}
   m_Layer: 5
   m_Name: '[Nodes Generator]'
   m_TagString: Untagged
@@ -2053,6 +2036,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1586799606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586799601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c22b84b4da11a48bb5883cb1b668f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1649998261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,7 +2126,6 @@ GameObject:
   - component: {fileID: 1765281142}
   - component: {fileID: 1765281141}
   - component: {fileID: 1765281140}
-  - component: {fileID: 1765281139}
   m_Layer: 5
   m_Name: Button - Quick Sort
   m_TagString: Untagged
@@ -2152,25 +2146,13 @@ RectTransform:
   m_Children:
   - {fileID: 267529911}
   m_Father: {fileID: 1225933896}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1765281139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765281137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7e89f72347f424683b198b5eeefec1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1765281140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,9 +2197,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1765281139}
-        m_TargetAssemblyTypeName: Sorting.BaseSorter, Assembly-CSharp
-        m_MethodName: RunSorter
+      - m_Target: {fileID: 1586799606}
+        m_TargetAssemblyTypeName: Sorting.SortingManager, Assembly-CSharp
+        m_MethodName: RunQuickSort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

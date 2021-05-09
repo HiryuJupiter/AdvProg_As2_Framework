@@ -26,10 +26,10 @@ namespace Sorting.Visualization
         NodeFactory factory;
 
         //Cache
-        Node[] perfectSequence;
+        List<Node> perfectSequence;
 
         //Properties
-        public Node[] Nodes { get; private set; } //Current sequence of nodes
+        public List<Node> Nodes { get; private set; } //Current sequence of nodes
 
         #region MonoBehaviour
         void Awake()
@@ -39,22 +39,23 @@ namespace Sorting.Visualization
 
             //Initialize
             Instance = this;
-            Nodes = new Node[nodeCount];
+            //Nodes = new List<Node>(nodeCount);
 
             //Create a perfect sequence of nodes
-            perfectSequence = new Node[nodeCount];
+            perfectSequence = new List<Node>(nodeCount);
             perfectSequence = factory.BuildSequence(nodeCount);
-            System.Array.Copy(perfectSequence, Nodes, perfectSequence.Length); //Array is a ref type, do a copy instead of assignment.
+
+            Nodes = perfectSequence.GetRange(0, perfectSequence.Count);
         }
         #endregion
 
         /// <summary>
         /// Set nodes to the array that's passed in
         /// </summary>
-        public void SetNodes(Node[] sorted)
+        public void SetNodes(List<Node> sorted)
         {
             Nodes = sorted;
-            for (int i = Nodes.Length - 1; i >= 0; i--)
+            for (int i = Nodes.Count - 1; i >= 0; i--)
                 Nodes[i].transform.SetAsFirstSibling();
         }
 
@@ -91,7 +92,7 @@ namespace Sorting.Visualization
             //We shuffle by selecting a random node and then move it to the front.
             //Keep a list of indexes that have yet to be moved to the front.
             List<int> unshuffled = new List<int>();
-            for (int i = 0; i < Nodes.Length; i++)
+            for (int i = 0; i < Nodes.Count; i++)
             {
                 unshuffled.Add(i);
             }
