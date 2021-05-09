@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['node_182',['Node',['../df/d07/class_sorting_1_1_visualization_1_1_node.html',1,'Sorting::Visualization']]],
-  ['nodefactory_183',['NodeFactory',['../db/de7/class_sorting_1_1_visualization_1_1_node_factory.html',1,'Sorting::Visualization']]]
+  ['objectpoolmanager_174',['ObjectPoolManager',['../de/d1f/class_hiryu_t_k_1_1_asteroids_top_down_controller_1_1_object_pool_manager.html',1,'HiryuTK::AsteroidsTopDownController']]]
 ];

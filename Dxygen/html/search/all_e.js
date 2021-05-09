@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quicksort_107',['QuickSort',['../dc/d48/class_sorting_1_1_sorter_1_1_quick_sort.html',1,'Sorting::Sorter']]]
+  ['quicksorter_100',['QuickSorter',['../da/d5c/class_sorting_1_1_sorter_1_1_quick_sorter.html',1,'Sorting::Sorter']]]
 ];
